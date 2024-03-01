@@ -18,13 +18,13 @@ minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt"
 locale                   : "en-US"
 title                    : "unixtz"
 title_separator          : "-"
-subtitle                 : # |Muslim | BlackHat | 0certfied | Exploit is Home |
+subtitle                 : |Muslim | BlackHat | 0certfied | Exploit is Home |
 |📍Africa,Tanzania | Exploit Loading ...!!!
 name                     : "unixtz"
 description              : "BlackHat Pentester Blog."
 url                      : # "https://iamunixtz.github.io"
 baseurl                  : # /blog"
-repository               : # "iamunixtz/iamunitx"
+repository               : "iamunixtz/iamunitz"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 logo                     : # "/assets/images/88x88.png"
 masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
@@ -39,14 +39,14 @@ comments:
   facebook:
     # https://developers.facebook.com/docs/plugins/comments
     appid                :
-    num_posts            : # 5 (default)
-    colorscheme          : # "dark"
+    num_posts            :  5 (default)
+    colorscheme          :  "dark"
   utterances:
     theme                : # "github-dark"
     issue_term           : # "pathname" (default)
   giscus:
     repo_id              : # Shown during giscus setup at https://giscus.app
-    category_name        : # Hacking
+    category_name        :  Hacking
     category_id          : # Shown during giscus setup at https://giscus.app
     discussion_term      : # "pathname" (default), "url", "title", "og:title"
     reactions_enabled    : # '1' for enabled (default), '0' for disabled
@@ -106,29 +106,29 @@ analytics:
 # Site Author
 author:
   name             : "iamunixtz"
-  avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  avatar           :  path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "I am an **amazing** person."
-  location         : "Somewhere"
+  location         : "Tanzania"
   email            :
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
-      # url: "mailto:unixtz@protonmail.com"
+       url: "mailto:unixtz@protonmail.com"
     - label: "Website"
       icon: "fas fa-fw fa-link"
-      # url: "https://iamunixtz.github.io"
+       url: "https://iamunixtz.github.io"
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
-      # url: "https://twitter.com/unixtzreal"
+       url: "https://twitter.com/unixtzreal"
     - label: "Facebook"
       icon: "fab fa-fw fa-facebook-square"
-      # url: "https://facebook.com/unixtz"
+       url: "https://facebook.com/unixtz"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      # url: "https://github.com/iamunixtz"
+       url: "https://github.com/iamunixtz"
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
-      # url: "https://instagram.com/unixtz"
+       url: "https://instagram.com/unixtz"
 
 # Site Footer
 footer:
