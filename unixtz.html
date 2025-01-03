@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Iamunixtz</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" href="images/dp.jpg" type="image/jpg" />
+    
+    <!-- Google Fonts & FontAwesome -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+
+    <style>
+      /* Global styles */
+      body {
+        margin: 0;
+        font-family: "Anton", sans-serif;
+        background-color: black; /* Full page background color */
+        color: white;
+        text-align: center;
+        cursor: url("https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/2/svg/1f577.svg"), auto;
+        /* Flexbox to make the footer stick to the bottom */
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+      }
+
+      /* Navbar styles */
+      .navbar {
+        background-color: #000;
+        padding: 10px 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .nav-links {
+        display: flex;
+        gap: 20px;
+      }
+
+      .nav-links a {
+        color: white;
+        text-decoration: none;
+        font-size: 18px;
+        transition: color 0.3s ease;
+      }
+
+      .nav-links a:hover {
+        color: #32cd32; /* Green hover color */
+      }
+
+      /* Hamburger menu icon */
+      .hamburger {
+        display: none;
+        cursor: pointer;
+      }
+
+      .hamburger div {
+        width: 25px;
+        height: 3px;
+        background-color: white;
+        margin: 5px;
+        transition: all 0.3s ease;
+      }
+
+      /* Responsive styles */
+      @media (max-width: 768px) {
+        .nav-links {
+          display: none;
+          flex-direction: column;
+          width: 100%;
+        }
+
+        .nav-links a {
+          padding: 10px;
+          border-top: 1px solid #32cd32;
+        }
+
+        .hamburger {
+          display: block;
+        }
+
+        .navbar.responsive .nav-links {
+          display: flex;
+        }
+
+        .navbar.responsive .hamburger div:nth-child(1) {
+          transform: rotate(-45deg) translate(-5px, 6px);
+        }
+
+        .navbar.responsive .hamburger div:nth-child(2) {
+          opacity: 0;
+        }
+
+        .navbar.responsive .hamburger div:nth-child(3) {
+          transform: rotate(45deg) translate(-5px, -6px);
+        }
+      }
+
+      /* Content styles */
+      .content {
+        margin-top: 50px;
+        flex: 1;
+      }
+
+      .content img {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        border: 5px solid #32cd32;
+      }
+
+      .content h1 {
+        font-size: 24px;
+        margin: 20px 0;
+      }
+
+      .content p {
+        font-size: 18px;
+        margin: 10px 0;
+      }
+
+      .content p span {
+        font-weight: bold;
+        color: #32cd32;
+      }
+
+      .content h2 {
+        font-size: 22px;
+        margin: 30px 0 10px;
+      }
+
+      /* Social media icons styles */
+      .social-icons {
+        display: flex;
+        justify-content: center;
+        gap: 20px; /* Space between the icons */
+        margin-top: 20px; /* Space above the icons */
+      }
+
+      .social-icons a {
+        color: white;
+        text-decoration: none;
+        font-size: 30px;
+        transition: color 0.3s ease, transform 0.3s ease;
+      }
+
+      .social-icons a:hover {
+        color: #32cd32;
+        transform: scale(1.2);
+      }
+
+      /* Footer styles */
+      .footer {
+        background-color: #000;
+        padding: 20px 0;
+        color: white;
+        text-align: center;
+        margin-top: auto;
+      }
+
+      .footer p {
+        margin-bottom: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <div class="navbar">
+      <!-- Hamburger menu icon for mobile -->
+      <div class="hamburger" onclick="toggleMenu()">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+
+      <!-- Links in the navbar -->
+      <div class="nav-links">
+        <a href="unixtz.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="blog.html">Blog</a>
+        <a href="project.html">Projects</a>
+      </div>
+    </div>
+
+    <!-- Content Section -->
+    <div class="content">
+      <!-- Profile Image -->
+      <img alt="Iamunixtz" src="images/dp.jpg" />
+      <h1>Hi! I'm Iamunixtz.</h1>
+      <p>
+        I am a <span id="jobTitle">----</span>
+      </p>
+
+      <!-- Social media icons -->
+      <div class="social-icons">
+        <a href="https://twitter.com/iamunixtz" target="_blank">
+          <i class="fab fa-twitter"></i> <!-- Twitter icon -->
+        </a>
+        <a href="https://www.instagram.com/iamunixtz" target="_blank">
+          <i class="fab fa-instagram"></i> <!-- Instagram icon -->
+        </a>
+        <a href="https://github.com/iamunixtz" target="_blank">
+          <i class="fab fa-github"></i> <!-- GitHub icon -->
+        </a>
+        <a href="https://www.twitch.tv/iamunixtz" target="_blank">
+          <i class="fab fa-twitch"></i> <!-- Twitch icon -->
+        </a>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+      <p>&copy; 2025 Iamunixtz Blog. All Rights Reserved.</p>
+    </div>
+
+    <script>
+      const titles = [
+        "Muslim.",
+        "Noob Malware Developer.",
+        "Bug Bounty Hunter.",
+        "Junior Red Teamer.",
+        "Junior Programmer.",
+      ];
+      let jobTitle = document.getElementById("jobTitle");
+      let titleIndex = 0;
+
+      jobTitle.textContent = "|";
+
+      function typeText() {
+        const text = titles[titleIndex];
+        jobTitle.textContent = "";
+        let charIndex = 0;
+
+        function type() {
+          if (charIndex < text.length) {
+            jobTitle.textContent += text.charAt(charIndex);
+            charIndex++;
+            setTimeout(type, 50);
+          } else {
+            setTimeout(deleteText, 2000);
+          }
+        }
+
+        function deleteText() {
+          if (jobTitle.textContent.length > 0) {
+            jobTitle.textContent = jobTitle.textContent.slice(0, -1);
+            setTimeout(deleteText, 50);
+          } else {
+            titleIndex = (titleIndex + 1) % titles.length;
+            jobTitle.textContent = "|";
+            setTimeout(typeText, 500);
+          }
+        }
+
+        type();
+      }
+
+      setTimeout(typeText, 1000);
+
+      // Toggle menu for mobile
+      function toggleMenu() {
+        const navbar = document.querySelector(".navbar");
+        navbar.classList.toggle("responsive");
+      }
+    </script>
+  </body>
+</html>

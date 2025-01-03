@@ -1,0 +1,349 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Iamunixtz Blog</title>
+    <!-- Add the Anton font from Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+
+    <style>
+      body {
+        margin: 0;
+        font-family: 'Anton', sans-serif;
+        background-color: #1a1a1a;
+        color: #e0e0e0;
+      }
+
+      /* Header Styles */
+      .header {
+        background-color: #000;
+        padding: 10px 20px;
+        display: flex;
+        align-items: center;
+      }
+
+      .header img {
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        margin-right: 10px;
+      }
+
+      .header h1 {
+        margin: 0;
+        font-size: 24px;
+        color: #fff;
+      }
+
+      .nav {
+        margin-left: auto;
+      }
+
+      .nav a {
+        color: #fff;
+        text-decoration: none;
+        margin: 0 10px;
+        font-size: 18px;
+        transition: color 0.3s ease, transform 0.3s ease;
+        cursor: pointer;
+      }
+
+      .nav a:hover {
+        color: #32cd32;
+        transform: scale(1.1);
+      }
+
+      /* Content Styles */
+      .content {
+        padding: 20px;
+      }
+
+      .post {
+        margin-bottom: 40px;
+        background-color: #333;
+        border-radius: 8px;
+        padding: 15px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      }
+
+      .post h2 {
+        color: #32cd32;
+        font-size: 24px;
+        margin-top: 15px;
+      }
+
+      .post .meta {
+        font-size: 14px;
+        color: #999;
+      }
+
+      .post .author {
+        display: flex;
+        align-items: center;
+        margin: 10px 0;
+      }
+
+      .post .author img {
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        margin-right: 10px;
+      }
+
+      .post .author span {
+        color: #32cd32;
+      }
+
+      .post p {
+        font-size: 16px;
+        line-height: 1.6;
+      }
+
+      .tags {
+        margin: 10px 0;
+      }
+
+      .tags span {
+        display: inline-block;
+        background-color: transparent;
+        border: 1px solid #32cd32;
+        color: #32cd32;
+        padding: 5px 10px;
+        border-radius: 5px;
+        margin-right: 5px;
+        font-size: 14px;
+      }
+
+      .read-more {
+        background-color: #32cd32;
+        color: #000;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        margin-top: 10px;
+        font-family: 'Anton', sans-serif; /* Using the Anton font */
+        transition: background-color 0.3s ease, transform 0.3s ease;
+      }
+
+      .read-more:hover {
+        background-color: #1a1a1a;
+        transform: scale(1.1);
+      }
+
+      /* Footer Styles */
+      .footer {
+        background-color: #000;
+        color: #fff;
+        padding: 20px 0;
+        text-align: center;
+        margin-top: 40px;
+      }
+
+      .footer a {
+        color: #32cd32;
+        text-decoration: none;
+        margin: 0 15px;
+        font-size: 16px;
+        transition: color 0.3s ease, transform 0.3s ease;
+      }
+
+      .footer a:hover {
+        color: #fff;
+        transform: scale(1.1);
+      }
+
+      /* Responsive design */
+      @media (max-width: 768px) {
+        .navbar {
+          flex-direction: column;
+          text-align: center;
+        }
+
+        .navbar a {
+          margin: 10px 0;
+          font-size: 16px;
+        }
+
+        .content h1 {
+          font-size: 20px;
+        }
+
+        .content p {
+          font-size: 16px;
+        }
+
+        .content h2 {
+          font-size: 20px;
+        }
+
+        .post {
+          padding: 10px;
+        }
+
+        .post h2 {
+          font-size: 20px;
+        }
+
+        .read-more {
+          font-size: 14px;
+          padding: 8px 15px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .header img {
+          width: 30px;
+          height: 30px;
+        }
+
+        .header h1 {
+          font-size: 18px;
+        }
+
+        .content {
+          padding: 10px;
+        }
+
+        .post h2 {
+          font-size: 18px;
+        }
+
+        .read-more {
+          font-size: 12px;
+          padding: 8px 12px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <img alt="Profile picture of the blog author" src="dp.jpg" />
+      <h1>Iamunixtz Blog</h1>
+      <div class="nav">
+        <a href="unixtz.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="blog.html">Blog</a>
+        <a href="projects.html">Projects</a>
+      </div>
+    </div>
+
+    <div class="content">
+      <!-- Blog Post 1 -->
+      <div class="post">
+        <h2>The Art of Learning Programming for Red Teaming and CyberSecurity</h2>
+        <div class="meta">
+          10 min read · Nov 11, 2024
+        </div>
+        <div class="author">
+          <img src="dp.jpg" alt="Author" />
+          <span>Iamunixtz</span>
+        </div>
+        <p>
+          This blog covers the importance of learning programming for Red Teaming and CyberSecurity engagements. If anyone says `programming is not applicable for red team` — ignore them!
+        </p>
+        <div class="tags">
+          <span>Programming</span>
+          <span>Red Teaming</span>
+          <span>CyberSecurity</span>
+        </div>
+        <button class="read-more">Read More</button>
+      </div>
+
+      <!-- Blog Post 2 -->
+      <div class="post">
+        <h2>Malware Development Essentials Part 1</h2>
+        <div class="meta">
+          9 min read · Mar 27, 2024
+        </div>
+        <div class="author">
+          <img src="dp.jpg" alt="Author" />
+          <span>Iamunixtz</span>
+        </div>
+        <p>
+          Become a beginner to intermediate in malware development. This covers fundamentals, core concepts, functions, OS internals, and more.
+        </p>
+        <div class="tags">
+          <span>Malware Development</span>
+          <span>Security</span>
+        </div>
+        <button class="read-more">Read More</button>
+      </div>
+
+      <!-- Blog Post 3 -->
+      <div class="post">
+        <h2>Introduction to Ethical Hacking</h2>
+        <div class="meta">
+          8 min read · Feb 15, 2024
+        </div>
+        <div class="author">
+          <img src="dp.jpg" alt="Author" />
+          <span>Iamunixtz</span>
+        </div>
+        <p>
+          This post covers the basics of ethical hacking, its importance, and how to get started with ethical hacking practices.
+        </p>
+        <div class="tags">
+          <span>Ethical Hacking</span>
+          <span>Security</span>
+          <span>Penetration Testing</span>
+        </div>
+        <button class="read-more">Read More</button>
+      </div>
+
+      <!-- Blog Post 4 -->
+      <div class="post">
+        <h2>Understanding OS Internals and Reverse Engineering</h2>
+        <div class="meta">
+          12 min read · Jan 20, 2024
+        </div>
+        <div class="author">
+          <img src="dp.jpg" alt="Author" />
+          <span>Iamunixtz</span>
+        </div>
+        <p>
+          A comprehensive introduction to operating system internals and reverse engineering techniques used in cybersecurity.
+        </p>
+        <div class="tags">
+          <span>OS Internals</span>
+          <span>Reverse Engineering</span>
+          <span>Security</span>
+        </div>
+        <button class="read-more">Read More</button>
+      </div>
+
+      <!-- Blog Post 5 -->
+      <div class="post">
+        <h2>Getting Started with Digital Forensics</h2>
+        <div class="meta">
+          10 min read · Dec 12, 2023
+        </div>
+        <div class="author">
+          <img src="dp.jpg" alt="Author" />
+          <span>Iamunixtz</span>
+        </div>
+        <p>
+          Digital forensics is a critical skill in investigating cybercrimes. This post breaks down the fundamentals and how you can get started in this field.
+        </p>
+        <div class="tags">
+          <span>Forensics</span>
+          <span>Cybersecurity</span>
+          <span>Investigation</span>
+        </div>
+        <button class="read-more">Read More</button>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+      <p>&copy; 2025 Iamunixtz Blog. All Rights Reserved.</p>
+      <div>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Contact</a>
+      </div>
+    </div>
+  </body>
+</html>
