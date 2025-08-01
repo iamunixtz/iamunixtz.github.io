@@ -2,13 +2,21 @@ import BlogLayout from "@/components/BlogLayout";
 import { Card, CardContent } from "@/components/ui/card";
 import { Github, Twitter, Mail, Globe } from "lucide-react";
 import blogLogo from "@/assets/blog-logo.png";
+import profilePic from "@/assets/profile.jpg";
 
 export default function About() {
   return (
     <BlogLayout>
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-12">
-          <img src={blogLogo} alt="iamunixt Logo" className="w-24 h-24 mx-auto mb-6 rounded-full" />
+          <div className="relative w-32 h-32 mx-auto mb-6">
+            <img 
+              src={profilePic} 
+              alt="iamunixt Profile" 
+              className="w-full h-full object-cover rounded-full border-4 border-primary shadow-lg" 
+            />
+            <div className="absolute inset-0 rounded-full bg-gradient-to-b from-transparent to-black/50"></div>
+          </div>
           <h1 className="text-4xl font-bold mb-4">About iamunixt</h1>
           <p className="text-xl text-muted-foreground">
             Cybersecurity Researcher, Bug Hunter & Ethical Hacker

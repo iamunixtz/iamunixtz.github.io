@@ -16,6 +16,7 @@ import {
   Sun
 } from "lucide-react";
 import blogLogo from "@/assets/blog-logo.png";
+import profilePic from "@/assets/profile.jpg";
 
 interface BlogLayoutProps {
   children: ReactNode;
@@ -63,7 +64,10 @@ export default function BlogLayout({ children }: BlogLayoutProps) {
         {/* Logo Section */}
         <div className="p-6 border-b border-blog-sidebar-border">
           <Link to="/" className="flex items-center space-x-3">
-            <img src={blogLogo} alt="Blog Logo" className="w-12 h-12 rounded-full" />
+            <div className="relative w-12 h-12">
+              <img src={profilePic} alt="iamunixt Profile" className="w-full h-full object-cover rounded-full border-2 border-primary shadow-md" />
+              <div className="absolute inset-0 rounded-full bg-gradient-to-b from-transparent to-black/30"></div>
+            </div>
             <div>
               <h1 className="text-xl font-bold text-blog-sidebar-foreground">iamunixt</h1>
               <p className="text-sm text-blog-sidebar-muted">Cybersecurity Researcher & Bug Hunter</p>
