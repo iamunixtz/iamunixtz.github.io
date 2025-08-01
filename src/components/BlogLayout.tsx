@@ -66,9 +66,9 @@ export default function BlogLayout({ children }: BlogLayoutProps) {
         {/* Logo Section */}
         <div className="p-6 border-b border-blog-sidebar-border">
           <Link to="/" className="flex items-center space-x-3">
-            <div className="relative w-12 h-12">
-              <LazyImage src={profilePic} alt="iamunixt Profile" className="w-full h-full object-cover rounded-full border-2 border-primary shadow-md" />
-              <div className="absolute inset-0 rounded-full bg-gradient-to-b from-transparent to-black/30"></div>
+            <div className="relative w-12 h-12 rounded-full overflow-hidden ring-2 ring-primary shadow-md">
+              <LazyImage src={profilePic} alt="iamunixt Profile" className="w-full h-full object-cover" />
+              <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/30"></div>
             </div>
             <div>
               <h1 className="text-xl font-bold text-blog-sidebar-foreground">iamunixt</h1>
