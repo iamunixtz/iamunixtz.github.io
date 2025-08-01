@@ -4,6 +4,7 @@ import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
+import { SearchCommand } from "@/components/SearchCommand";
 import { 
   Home, 
   FolderOpen, 
@@ -100,6 +101,11 @@ export default function BlogLayout({ children }: BlogLayoutProps) {
             })}
           </ul>
         </nav>
+
+        {/* Search */}
+        <div className="p-4 border-t border-blog-sidebar-border">
+          <SearchCommand />
+        </div>
 
         {/* Theme Toggle */}
         <div className="p-4 border-t border-blog-sidebar-border">
