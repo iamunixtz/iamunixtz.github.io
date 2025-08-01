@@ -4,6 +4,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { mockPosts } from "@/data/mockPosts";
 import { Calendar, User, Clock, ArrowLeft } from "lucide-react";
+import { MarkdownRenderer } from "@/components/MarkdownRenderer";
 
 export default function PostDetail() {
   const { id } = useParams<{ id: string }>();
@@ -83,8 +84,8 @@ export default function PostDetail() {
         </header>
 
         {/* Post Content */}
-        <div className="prose prose-lg max-w-none">
-          <div className="whitespace-pre-wrap">{post.content}</div>
+        <div className="mt-8">
+          <MarkdownRenderer content={post.content} />
         </div>
 
         {/* Post Footer */}

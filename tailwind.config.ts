@@ -17,6 +17,18 @@ export default {
 				'2xl': '1400px'
 			}
 		},
+		typography: {
+			DEFAULT: {
+				css: {
+					'code::before': {
+						content: '""'
+					},
+					'code::after': {
+						content: '""'
+					}
+				}
+			}
+		},
 		extend: {
 			colors: {
 				border: 'hsl(var(--border))',
