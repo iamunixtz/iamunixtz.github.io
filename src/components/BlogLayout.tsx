@@ -27,7 +27,6 @@ interface BlogLayoutProps {
 
 const navigation = [
   { name: "Home", href: "/", icon: Home },
-  { name: "Categories", href: "/categories", icon: FolderOpen },
   { name: "Archives", href: "/archives", icon: Archive },
   { name: "About", href: "/about", icon: User }
 ];
@@ -156,24 +155,18 @@ export default function BlogLayout({ children }: BlogLayoutProps) {
         <header className="bg-card border-b border-border p-4">
           <div className="flex items-center justify-between max-w-6xl mx-auto">
             <div className="flex items-center space-x-4">
-              <h2 className="text-lg font-semibold">Home</h2>
+              <h2 className="text-lg font-semibold font-heading">$ iamunixt_blog</h2>
             </div>
             <div className="flex items-center space-x-4">
               <div className="relative">
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground w-4 h-4" />
                 <Input
-                  placeholder="Search..."
+                  placeholder="Search posts..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
-                  className="pl-10 w-64"
+                  className="pl-10 w-64 bg-background border-primary/50 focus:border-primary"
                 />
               </div>
-              <Button asChild>
-                <Link to="/new-post">
-                  <PenTool className="w-4 h-4 mr-2" />
-                  New Post
-                </Link>
-              </Button>
             </div>
           </div>
         </header>

@@ -11,9 +11,7 @@ import "./styles/cyber-theme.css";
 // Lazy load components
 const Home = lazy(() => import("./pages/Home"));
 const PostDetail = lazy(() => import("./pages/PostDetail"));
-const NewPost = lazy(() => import("./pages/NewPost"));
 const About = lazy(() => import("./pages/About"));
-const Categories = lazy(() => import("./pages/Categories"));
 const Archives = lazy(() => import("./pages/Archives"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 
@@ -36,9 +34,7 @@ const App = () => (
             <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/post/:id" element={<PostDetail />} />
-            <Route path="/new-post" element={<NewPost />} />
             <Route path="/about" element={<About />} />
-            <Route path="/categories" element={<Categories />} />
             <Route path="/archives" element={<Archives />} />
             <Route path="*" element={<NotFound />} />
           </Routes>

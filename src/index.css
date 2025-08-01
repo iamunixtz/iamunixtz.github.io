@@ -39,32 +39,32 @@ All colors MUST be HSL.
   }
 
   :root {
-    /* Base theme colors - Dark cyberpunk inspired */
-    --background: 230 20% 11%;    /* Deep blue-black */
-    --foreground: 155 50% 85%;    /* Soft cyber mint */
+    /* Base theme colors - Aggressive cyber theme */
+    --background: 220 30% 8%;     /* Deeper, darker background */
+    --foreground: 120 100% 85%;   /* Bright matrix green */
 
-    --card: 230 20% 15%;         /* Slightly lighter background */
-    --card-foreground: 155 50% 85%;
+    --card: 220 25% 12%;          /* Card background */
+    --card-foreground: 120 100% 85%;
 
-    --popover: 230 20% 15%;
-    --popover-foreground: 155 50% 85%;
+    --popover: 220 25% 12%;
+    --popover-foreground: 120 100% 85%;
 
-    /* Primary - Terminal green */
-    --primary: 135 75% 45%;      /* Matrix-inspired green */
-    --primary-foreground: 230 20% 11%;
-    --primary-hover: 135 75% 40%;
+    /* Primary - Neon green */
+    --primary: 120 100% 50%;      /* Bright neon green */
+    --primary-foreground: 220 30% 8%;
+    --primary-hover: 120 100% 45%;
 
-    /* Secondary - Cyber blue */
-    --secondary: 210 80% 25%;    /* Deep electric blue */
-    --secondary-foreground: 155 50% 85%;
+    /* Secondary - Dark elements */
+    --secondary: 220 25% 15%;     /* Slightly lighter than background */
+    --secondary-foreground: 120 100% 85%;
 
-    /* Muted - Subdued interface elements */
-    --muted: 230 20% 20%;       /* Slightly lighter than background */
-    --muted-foreground: 155 30% 65%;
+    /* Muted - Terminal-like elements */
+    --muted: 220 30% 18%;         /* Muted background */
+    --muted-foreground: 120 60% 70%;
 
-    /* Accent - Neon cyan */
-    --accent: 180 90% 50%;      /* Bright cyber cyan */
-    --accent-foreground: 230 20% 11%;
+    /* Accent - Red for emphasis */
+    --accent: 0 100% 60%;         /* Cyber red */
+    --accent-foreground: 220 30% 8%;
 
     /* Destructive - Cyber red */
     --destructive: 355 90% 50%;  /* Warning/error red */
