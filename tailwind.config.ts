@@ -26,7 +26,8 @@ export default {
 				foreground: 'hsl(var(--foreground))',
 				primary: {
 					DEFAULT: 'hsl(var(--primary))',
-					foreground: 'hsl(var(--primary-foreground))'
+					foreground: 'hsl(var(--primary-foreground))',
+					hover: 'hsl(var(--primary-hover))'
 				},
 				secondary: {
 					DEFAULT: 'hsl(var(--secondary))',
@@ -61,7 +62,25 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				blog: {
+					sidebar: 'hsl(var(--blog-sidebar))',
+					'sidebar-foreground': 'hsl(var(--blog-sidebar-foreground))',
+					'sidebar-muted': 'hsl(var(--blog-sidebar-muted))',
+					'sidebar-border': 'hsl(var(--blog-sidebar-border))',
+					'sidebar-hover': 'hsl(var(--blog-sidebar-hover))',
+					'post-meta': 'hsl(var(--blog-post-meta))',
+					tag: 'hsl(var(--blog-tag))',
+					'tag-foreground': 'hsl(var(--blog-tag-foreground))'
 				}
+			},
+			backgroundImage: {
+				'gradient-primary': 'var(--gradient-primary)',
+				'gradient-card': 'var(--gradient-card)'
+			},
+			boxShadow: {
+				'card': 'var(--shadow-card)',
+				'card-hover': 'var(--shadow-card-hover)'
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
