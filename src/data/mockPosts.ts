@@ -9,7 +9,7 @@ export interface BlogPost {
   readTime: string;
   tags: string[];
   featured?: boolean;
-  category: string;
+  categories: string[];
 }
 
 export const mockPosts: BlogPost[] = [
@@ -102,7 +102,7 @@ As a security researcher (iamunixtz) focusing on web application security, I reg
     date: "July 11, 2024",
     readTime: "10 min read",
     tags: ["sql-injection", "bug-bounty", "web-security", "hackerone", "dod"],
-    category: "Bug Hunting",
+    categories: ["Bug Hunting", "Web Security"],
     featured: true
   },
   {
@@ -232,7 +232,7 @@ Remember: Always ensure you have proper authorization before conducting any reco
     date: "Dec 12, 2023",
     readTime: "6 min read",
     tags: ["recon", "red team", "research", "exploitation"],
-    category: "Red Team"
+    categories: ["Red Team", "Network Security"]
   },
   {
     id: 3,
@@ -307,7 +307,7 @@ Always remember: Knowledge of offensive techniques should only be used for defen
     date: "Dec 10, 2023",
     readTime: "10 min read",
     tags: ["malware dev", "research", "red team", "exploitation"],
-    category: "Malware Research"
+    categories: ["Malware Research", "Reverse Engineering"]
   },
   {
     id: 4,
@@ -423,6 +423,6 @@ Remember: The goal of security research should always be to make systems safer, 
     date: "Dec 8, 2023",
     readTime: "12 min read",
     tags: ["zeroday", "research", "exploitation", "bughunting"],
-    category: "Vulnerability Research"
+    categories: ["Vulnerability Research", "Software Security"]
   }
 ];

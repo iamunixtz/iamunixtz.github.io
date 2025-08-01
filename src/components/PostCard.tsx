@@ -13,6 +13,7 @@ interface PostCardProps {
   readTime: string;
   tags: string[];
   featured?: boolean;
+  categories: string[];
 }
 
 export default function PostCard({
@@ -24,7 +25,8 @@ export default function PostCard({
   date,
   readTime,
   tags,
-  featured = false
+  featured = false,
+  categories
 }: PostCardProps) {
   return (
     <article 
@@ -44,6 +46,17 @@ export default function PostCard({
       )}
       
       <div className="p-6">
+        {/* Categories */}
+        <div className="flex flex-wrap gap-2 mb-2">
+          {categories.map((category) => (
+            <Link key={category} to={`/?category=${encodeURIComponent(category)}`}>
+              <Badge variant="secondary" className="hover:bg-secondary/80">
+                {category}
+              </Badge>
+            </Link>
+          ))}
+        </div>
+
         {/* Tags */}
         <div className="flex flex-wrap gap-2 mb-3">
           {tags.map((tag) => (

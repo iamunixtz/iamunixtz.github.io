@@ -1,14 +1,36 @@
+import { useSearchParams } from "react-router-dom";
 import BlogLayout from "@/components/BlogLayout";
 import PostCard from "@/components/PostCard";
 import { mockPosts } from "@/data/mockPosts";
+import { Badge } from "@/components/ui/badge";
+import { X } from "lucide-react";
 
 export default function Home() {
-  const featuredPost = mockPosts.find(post => post.featured);
-  const regularPosts = mockPosts.filter(post => !post.featured);
+  const [searchParams, setSearchParams] = useSearchParams();
+  const categoryFilter = searchParams.get("category");
+
+  const filteredPosts = categoryFilter
+    ? mockPosts.filter(post => post.categories.includes(categoryFilter))
+    : mockPosts;
+
+  const featuredPost = filteredPosts.find(post => post.featured);
+  const regularPosts = filteredPosts.filter(post => !post.featured);
 
   return (
     <BlogLayout>
       <div className="space-y-8">
+        {categoryFilter && (
+          <div className="flex items-center gap-2 mb-4">
+            <span className="text-sm text-muted-foreground">Filtered by category:</span>
+            <Badge variant="secondary" className="flex items-center gap-1">
+              {categoryFilter}
+              <X
+                className="h-3 w-3 cursor-pointer"
+                onClick={() => setSearchParams({})}
+              />
+            </Badge>
+          </div>
+        )}
         {/* Featured Post */}
         {featuredPost && (
           <section>
@@ -22,6 +44,7 @@ export default function Home() {
               date={featuredPost.date}
               readTime={featuredPost.readTime}
               tags={featuredPost.tags}
+              categories={featuredPost.categories}
               featured={true}
             />
           </section>
@@ -42,6 +65,7 @@ export default function Home() {
                 date={post.date}
                 readTime={post.readTime}
                 tags={post.tags}
+                categories={post.categories}
               />
             ))}
           </div>
