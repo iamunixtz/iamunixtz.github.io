@@ -16,7 +16,7 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <HashRouter>
+      <HashRouter basename="/">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/post/:id" element={<PostDetail />} />
