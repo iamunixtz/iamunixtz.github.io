@@ -17,6 +17,11 @@ export default {
 				'2xl': '1400px'
 			}
 		},
+		fontFamily: {
+			mono: ['IBM Plex Mono', 'monospace'],
+			heading: ['Fira Code', 'monospace'],
+			code: ['IBM Plex Mono', 'monospace'],
+		},
 		typography: {
 			DEFAULT: {
 				css: {

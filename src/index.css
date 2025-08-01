@@ -7,45 +7,76 @@ All colors MUST be HSL.
 */
 
 @layer base {
+  /* Matrix rain animation */
+  @keyframes matrix-rain {
+    0% {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+    10% {
+      opacity: 1;
+    }
+    90% {
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(100vh);
+      opacity: 0;
+    }
+  }
+
+  /* Terminal typing effect */
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+
+  /* Code block glow effect */
+  @keyframes code-glow {
+    0% { box-shadow: 0 0 5px hsla(120, 100%, 45%, 0.2); }
+    50% { box-shadow: 0 0 20px hsla(120, 100%, 45%, 0.4); }
+    100% { box-shadow: 0 0 5px hsla(120, 100%, 45%, 0.2); }
+  }
+
   :root {
-    /* Blog-specific color palette */
-    --background: 0 0% 98%;
-    --foreground: 210 11% 15%;
+    /* Cybersecurity-themed color palette */
+    --background: 220 13% 10%;
+    --foreground: 120 100% 86%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 210 11% 15%;
+    --card: 220 13% 15%;
+    --card-foreground: 120 100% 86%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 210 11% 15%;
+    --popover: 220 13% 15%;
+    --popover-foreground: 120 100% 86%;
 
-    --primary: 217 91% 60%;
-    --primary-foreground: 0 0% 100%;
-    --primary-hover: 217 91% 55%;
+    --primary: 120 100% 45%;
+    --primary-foreground: 220 13% 10%;
+    --primary-hover: 120 100% 40%;
 
-    --secondary: 220 13% 95%;
-    --secondary-foreground: 210 11% 15%;
+    --secondary: 220 13% 20%;
+    --secondary-foreground: 120 100% 86%;
 
-    --muted: 220 13% 95%;
-    --muted-foreground: 220 9% 46%;
+    --muted: 220 13% 25%;
+    --muted-foreground: 120 100% 75%;
 
-    --accent: 217 91% 60%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 160 100% 45%;
+    --accent-foreground: 220 13% 10%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 220 13% 91%;
-    --input: 220 13% 91%;
-    --ring: 217 91% 60%;
+    --border: 220 13% 20%;
+    --input: 220 13% 20%;
+    --ring: 120 100% 45%;
 
     --radius: 0.75rem;
 
     /* Blog-specific tokens */
-    --blog-sidebar: 0 0% 100%;
-    --blog-sidebar-foreground: 210 11% 15%;
-    --blog-sidebar-muted: 220 9% 46%;
-    --blog-sidebar-border: 220 13% 91%;
-    --blog-sidebar-hover: 220 13% 95%;
+    --blog-sidebar: 220 13% 12%;
+    --blog-sidebar-foreground: 120 100% 86%;
+    --blog-sidebar-muted: 120 100% 75%;
+    --blog-sidebar-border: 220 13% 20%;
+    --blog-sidebar-hover: 220 13% 25%;
 
     --blog-post-meta: 220 9% 46%;
     --blog-tag: 217 91% 95%;

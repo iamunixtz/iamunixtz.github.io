@@ -9,7 +9,6 @@ import { LazyImage } from "@/components/LazyImage";
 import { 
   Home, 
   FolderOpen, 
-  Tag, 
   Archive, 
   User, 
   Search,
@@ -27,9 +26,8 @@ interface BlogLayoutProps {
 const navigation = [
   { name: "Home", href: "/", icon: Home },
   { name: "Categories", href: "/categories", icon: FolderOpen },
-  { name: "Tags", href: "/tags", icon: Tag },
   { name: "Archives", href: "/archives", icon: Archive },
-  { name: "About", href: "/about", icon: User },
+  { name: "About", href: "/about", icon: User }
 ];
 
 const trendingTags = [
@@ -60,7 +58,8 @@ export default function BlogLayout({ children }: BlogLayoutProps) {
   };
 
   return (
-    <div className="min-h-screen bg-background flex">
+    <div className="min-h-screen bg-background flex relative">
+      <div className="matrix-bg" />
       {/* Sidebar */}
       <aside className="w-64 bg-blog-sidebar border-r border-blog-sidebar-border flex flex-col">
         {/* Logo Section */}

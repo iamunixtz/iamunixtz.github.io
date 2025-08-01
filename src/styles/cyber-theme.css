@@ -1,0 +1,120 @@
+/* Cybersecurity Theme Styles */
+
+/* Matrix rain animation */
+@keyframes matrix-rain {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh);
+    opacity: 0;
+  }
+}
+
+/* Terminal typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* Code block glow effect */
+@keyframes code-glow {
+  0% { box-shadow: 0 0 5px hsla(120, 100%, 45%, 0.2); }
+  50% { box-shadow: 0 0 20px hsla(120, 100%, 45%, 0.4); }
+  100% { box-shadow: 0 0 5px hsla(120, 100%, 45%, 0.2); }
+}
+
+/* Custom Components */
+.code-block {
+  font-family: 'IBM Plex Mono', monospace;
+  background-color: hsl(220,13%,15%);
+  color: hsl(120,100%,86%);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  position: relative;
+  overflow: hidden;
+  animation: code-glow 4s ease-in-out infinite;
+}
+
+.code-block::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, 
+    hsl(120,100%,45%) 0%,
+    hsl(160,100%,45%) 50%,
+    hsl(120,100%,45%) 100%
+  );
+}
+
+.matrix-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+  opacity: 0.03;
+  background: 
+    repeating-linear-gradient(0deg,
+      hsl(120,100%,45%) 0%,
+      transparent 50%,
+      hsl(120,100%,45%) 100%
+    );
+  background-size: 100% 50px;
+  animation: matrix-rain 20s linear infinite;
+}
+
+.terminal-text {
+  font-family: 'IBM Plex Mono', monospace;
+  border-right: 2px solid hsl(120,100%,45%);
+  white-space: nowrap;
+  overflow: hidden;
+  animation: typing 3.5s steps(40, end);
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Fira Code', monospace;
+  color: hsl(120,100%,86%);
+}
+
+code, pre {
+  font-family: 'IBM Plex Mono', monospace;
+}
+
+/* Link hover effects */
+a:hover {
+  text-shadow: 0 0 8px hsl(120,100%,45%);
+  transition: text-shadow 0.3s ease;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(220,13%,15%);
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(120,100%,45%);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(120,100%,40%);
+}
