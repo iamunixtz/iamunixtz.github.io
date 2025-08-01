@@ -18,8 +18,8 @@ export default function NewPost() {
     excerpt: "",
     content: "",
     tags: "",
-    author: "Blog Admin",
-    category: "General"
+    author: "iamunixtz",
+    category: "Security Research"
   });
   const [tagList, setTagList] = useState<string[]>([]);
 

@@ -30,19 +30,20 @@ const navigation = [
 ];
 
 const trendingTags = [
-  "Getting Started",
-  "Typography", 
-  "Writing",
-  "Tutorial",
-  "React",
-  "Web Development"
+  "zeroday",
+  "exploitation", 
+  "research",
+  "bughunting",
+  "recon",
+  "red team",
+  "malware dev"
 ];
 
 const recentPosts = [
-  "Getting Started with Your Blog",
-  "Text and Typography Guide", 
-  "Writing Your First Post",
-  "Customizing Your Theme"
+  "Zero-Day Vulnerability Research",
+  "Advanced Reconnaissance Techniques", 
+  "Bug Hunting for Beginners",
+  "Malware Development Research"
 ];
 
 export default function BlogLayout({ children }: BlogLayoutProps) {
@@ -64,8 +65,8 @@ export default function BlogLayout({ children }: BlogLayoutProps) {
           <Link to="/" className="flex items-center space-x-3">
             <img src={blogLogo} alt="Blog Logo" className="w-12 h-12 rounded-full" />
             <div>
-              <h1 className="text-xl font-bold text-blog-sidebar-foreground">Chirpy</h1>
-              <p className="text-sm text-blog-sidebar-muted">A text-focused blog theme</p>
+              <h1 className="text-xl font-bold text-blog-sidebar-foreground">iamunixt</h1>
+              <p className="text-sm text-blog-sidebar-muted">Cybersecurity Researcher & Bug Hunter</p>
             </div>
           </Link>
         </div>

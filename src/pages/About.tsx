@@ -8,34 +8,36 @@ export default function About() {
     <BlogLayout>
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-12">
-          <img src={blogLogo} alt="Blog Logo" className="w-24 h-24 mx-auto mb-6 rounded-full" />
-          <h1 className="text-4xl font-bold mb-4">About This Blog</h1>
+          <img src={blogLogo} alt="iamunixt Logo" className="w-24 h-24 mx-auto mb-6 rounded-full" />
+          <h1 className="text-4xl font-bold mb-4">About iamunixt</h1>
           <p className="text-xl text-muted-foreground">
-            A modern, clean blog focused on sharing knowledge and ideas
+            Cybersecurity Researcher, Bug Hunter & Ethical Hacker
           </p>
         </div>
 
         <div className="grid gap-8 md:grid-cols-2">
           <Card>
             <CardContent className="p-6">
-              <h2 className="text-2xl font-bold mb-4">Our Mission</h2>
+              <h2 className="text-2xl font-bold mb-4">Who I Am</h2>
               <p className="text-muted-foreground leading-relaxed">
-                We believe in the power of sharing knowledge and experiences. This blog serves as a 
-                platform to explore technology, design, and development while building a community 
-                of learners and creators.
+                I'm a passionate cybersecurity researcher and bug hunter with expertise in 
+                vulnerability research, penetration testing, and ethical hacking. I believe in 
+                making the digital world safer through responsible disclosure and knowledge sharing.
               </p>
             </CardContent>
           </Card>
 
           <Card>
             <CardContent className="p-6">
-              <h2 className="text-2xl font-bold mb-4">What We Write About</h2>
+              <h2 className="text-2xl font-bold mb-4">Areas of Expertise</h2>
               <ul className="space-y-2 text-muted-foreground">
-                <li>• Web Development & Programming</li>
-                <li>• User Interface & User Experience Design</li>
-                <li>• Technology Trends & Insights</li>
-                <li>• Tutorials & How-to Guides</li>
-                <li>• Personal Development & Learning</li>
+                <li>• Web Application Security & Penetration Testing</li>
+                <li>• Zero-Day Vulnerability Research</li>
+                <li>• Bug Bounty Hunting & Responsible Disclosure</li>
+                <li>• Red Team Operations & OSINT</li>
+                <li>• Malware Analysis & Reverse Engineering</li>
+                <li>• Network Security & Reconnaissance</li>
+                <li>• Social Engineering & Physical Security</li>
               </ul>
             </CardContent>
           </Card>
@@ -43,9 +45,10 @@ export default function About() {
 
         <Card className="mt-8">
           <CardContent className="p-8 text-center">
-            <h2 className="text-2xl font-bold mb-6">Get in Touch</h2>
+            <h2 className="text-2xl font-bold mb-6">Connect & Collaborate</h2>
             <p className="text-muted-foreground mb-6">
-              Have questions, suggestions, or just want to say hello? We'd love to hear from you!
+              Interested in security research, bug bounty collaboration, or have vulnerabilities to discuss? 
+              Let's connect and make the internet a safer place together!
             </p>
             <div className="flex justify-center gap-6">
               <a href="#" className="flex items-center gap-2 text-primary hover:text-primary-hover transition-colors">
@@ -70,7 +73,7 @@ export default function About() {
 
         <div className="mt-12 text-center text-muted-foreground">
           <p>
-            Built with ❤️ using React, TypeScript, and Tailwind CSS
+            "Security is not a product, but a process" - Built with ❤️ for the cybersecurity community
           </p>
         </div>
       </div>
