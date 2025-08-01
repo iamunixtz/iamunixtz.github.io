@@ -20,8 +20,10 @@ export default function About() {
             <CardContent className="p-6">
               <h2 className="text-2xl font-bold mb-4">Who I Am</h2>
               <p className="text-muted-foreground leading-relaxed">
-                I'm a passionate cybersecurity researcher and bug hunter with expertise in 
-                vulnerability research, penetration testing, and ethical hacking. I believe in 
+                As an accomplished bug bounty hunter and security researcher, I've successfully identified and 
+                reported critical vulnerabilities to major organizations including the U.S. Department of Defense. 
+                With a proven track record on HackerOne and other platforms, I specialize in web application 
+                security, with particular expertise in SQL injection, authentication bypasses, and business logic flaws. 
                 making the digital world safer through responsible disclosure and knowledge sharing.
               </p>
             </CardContent>
@@ -31,13 +33,13 @@ export default function About() {
             <CardContent className="p-6">
               <h2 className="text-2xl font-bold mb-4">Areas of Expertise</h2>
               <ul className="space-y-2 text-muted-foreground">
-                <li>• Web Application Security & Penetration Testing</li>
-                <li>• Zero-Day Vulnerability Research</li>
-                <li>• Bug Bounty Hunting & Responsible Disclosure</li>
-                <li>• Red Team Operations & OSINT</li>
-                <li>• Malware Analysis & Reverse Engineering</li>
-                <li>• Network Security & Reconnaissance</li>
-                <li>• Social Engineering & Physical Security</li>
+                <li>• Web Application Security & Bug Bounty Hunting</li>
+                <li>• SQL Injection & Authentication Bypass Specialist</li>
+                <li>• HackerOne Top Reporter for DoD Programs</li>
+                <li>• Advanced Web Security Testing & Exploitation</li>
+                <li>• Secure Code Review & Vulnerability Assessment</li>
+                <li>• Responsible Disclosure & Technical Writing</li>
+                <li>• Security Awareness & Knowledge Sharing</li>
               </ul>
             </CardContent>
           </Card>

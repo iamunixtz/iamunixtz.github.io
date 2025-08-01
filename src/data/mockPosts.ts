@@ -14,6 +14,98 @@ export interface BlogPost {
 
 export const mockPosts: BlogPost[] = [
   {
+    id: 5,
+    title: "Blind SQL Injection Discovery in DoD Platform - HackerOne Report #2597543",
+    excerpt: "A detailed analysis of a critical SQL injection vulnerability discovered in a Department of Defense asset, demonstrating the importance of proper input validation.",
+    content: `# Blind SQL Injection Discovery in DoD Platform
+    
+## Overview
+
+During a security assessment of a Department of Defense asset, I discovered a critical SQL injection vulnerability in the User-Agent header. This finding was reported through HackerOne (Report #2597543) and successfully validated by the DoD security team.
+
+## Technical Details
+
+### Vulnerability Type
+- Blind SQL Injection
+- Location: User-Agent HTTP Header
+- Database: MySQL >= 8.0.0 (MariaDB fork)
+
+### Discovery Process
+
+During my testing, I identified that the application was processing the User-Agent header without proper input validation. Using SQLMap, I was able to confirm the presence of a boolean-based blind SQL injection.
+
+\`\`\`bash
+# Initial Discovery Command
+sqlmap --url "https://[redacted]/" --batch --random-agent --level 5 --risk 3
+\`\`\`
+
+### Injection Point Details
+
+The vulnerability was confirmed with the following characteristics:
+- Parameter: User-Agent (HTTP Header)
+- Type: Boolean-based blind
+- Title: OR boolean-based blind - WHERE or HAVING clause
+- Example Payload: \`-5127 OR 2687=2687\`
+
+## Impact Analysis
+
+The discovery of this vulnerability highlighted several critical security concerns:
+
+1. **Data Access**: An attacker could potentially:
+   - Extract sensitive information from the database
+   - Modify database contents
+   - Escalate privileges within the database
+
+2. **System Risk**: The vulnerability could lead to:
+   - Unauthorized access to internal systems
+   - Compromise of connected services
+   - Potential lateral movement within the network
+
+## Remediation Recommendations
+
+### Immediate Actions
+1. Implement strict input validation for all HTTP headers
+2. Use parameterized queries for all database operations
+3. Deploy WAF rules to detect and block SQL injection attempts
+
+### Long-term Security Improvements
+1. Regular security assessments
+2. Developer training on secure coding practices
+3. Implementation of DAST/SAST in the development pipeline
+
+## Lessons Learned
+
+This finding emphasizes several key points for security professionals:
+
+1. **Testing Methodology**
+   - Always check HTTP headers for injection points
+   - Use comprehensive testing tools with appropriate risk levels
+   - Verify findings manually to understand full impact
+
+2. **Security Best Practices**
+   - Input validation is crucial for ALL user-controlled data
+   - HTTP headers are often overlooked but critical attack vectors
+   - Defense in depth is essential for web applications
+
+## Disclosure Timeline
+
+- July 11, 2024: Initial report submitted
+- Report validated and triaged by DoD
+- Vulnerability successfully remediated
+
+## About the Author
+
+As a security researcher (iamunixtz) focusing on web application security, I regularly participate in bug bounty programs and security assessments. This finding represents one of many contributions to improving the security posture of critical infrastructure.
+
+> Note: All sensitive information has been redacted in compliance with responsible disclosure practices.`,
+    author: "iamunixtz",
+    date: "July 11, 2024",
+    readTime: "10 min read",
+    tags: ["sql-injection", "bug-bounty", "web-security", "hackerone", "dod"],
+    category: "Bug Hunting",
+    featured: true
+  },
+  {
     id: 1,
     title: "Getting Started with Bug Hunting: A Beginner's Guide",
     excerpt: "Learn the fundamentals of ethical hacking and bug bounty hunting. This comprehensive guide covers reconnaissance, vulnerability assessment, and responsible disclosure practices.",
