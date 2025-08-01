@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
 import { SearchCommand } from "@/components/SearchCommand";
+import { LazyImage } from "@/components/LazyImage";
 import { 
   Home, 
   FolderOpen, 
@@ -66,7 +67,7 @@ export default function BlogLayout({ children }: BlogLayoutProps) {
         <div className="p-6 border-b border-blog-sidebar-border">
           <Link to="/" className="flex items-center space-x-3">
             <div className="relative w-12 h-12">
-              <img src={profilePic} alt="iamunixt Profile" className="w-full h-full object-cover rounded-full border-2 border-primary shadow-md" />
+              <LazyImage src={profilePic} alt="iamunixt Profile" className="w-full h-full object-cover rounded-full border-2 border-primary shadow-md" />
               <div className="absolute inset-0 rounded-full bg-gradient-to-b from-transparent to-black/30"></div>
             </div>
             <div>

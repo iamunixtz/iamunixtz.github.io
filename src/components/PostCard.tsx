@@ -2,6 +2,8 @@ import { Link } from "react-router-dom";
 import { Badge } from "@/components/ui/badge";
 import { Calendar, User, Clock } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { LazyImage } from "@/components/LazyImage";
+import { ShareButtons } from "@/components/ShareButtons";
 
 interface PostCardProps {
   id: number;
@@ -37,10 +39,10 @@ export default function PostCard({
     >
       {image && (
         <div className="aspect-video overflow-hidden">
-          <img
+          <LazyImage
             src={image}
             alt={title}
-            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+            className="w-full h-full group-hover:scale-105 transition-transform duration-300"
           />
         </div>
       )}
@@ -95,6 +97,15 @@ export default function PostCard({
           <div className="flex items-center gap-1">
             <Clock className="w-4 h-4" />
             <span>{readTime}</span>
+          </div>
+          
+          {/* Share Buttons */}
+          <div className="mt-4">
+            <ShareButtons
+              title={title}
+              url={`${window.location.origin}/#/post/${id}`}
+              description={excerpt}
+            />
           </div>
         </div>
       </div>

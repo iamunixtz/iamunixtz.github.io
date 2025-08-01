@@ -5,6 +5,8 @@ import { Button } from "@/components/ui/button";
 import { mockPosts } from "@/data/mockPosts";
 import { Calendar, User, Clock, ArrowLeft } from "lucide-react";
 import { MarkdownRenderer } from "@/components/MarkdownRenderer";
+import { LazyImage } from "@/components/LazyImage";
+import { ShareButtons } from "@/components/ShareButtons";
 
 export default function PostDetail() {
   const { id } = useParams<{ id: string }>();
@@ -43,13 +45,22 @@ export default function PostDetail() {
         <header className="mb-8">
           {post.image && (
             <div className="aspect-video mb-6 rounded-lg overflow-hidden">
-              <img
+              <LazyImage
                 src={post.image}
                 alt={post.title}
-                className="w-full h-full object-cover"
+                className="w-full h-full"
               />
             </div>
           )}
+          
+          {/* Share Buttons */}
+          <div className="mb-6">
+            <ShareButtons
+              title={post.title}
+              url={window.location.href}
+              description={post.excerpt}
+            />
+          </div>
 
           <div className="space-y-4">
             <div className="flex flex-wrap gap-2">
@@ -93,7 +104,7 @@ export default function PostDetail() {
           <div className="flex items-center justify-between">
             <div>
               <p className="text-sm text-muted-foreground">
-                Published in <span className="font-medium">{post.category}</span>
+                Published in <span className="font-medium">{post.categories.join(", ")}</span>
               </p>
             </div>
             <div className="flex gap-2">
