@@ -9,6 +9,8 @@ import NewPost from "./pages/NewPost";
 import About from "./pages/About";
 import NotFound from "./pages/NotFound";
 import Categories from "./pages/Categories";
+import Tags from "./pages/Tags";
+import Archives from "./pages/Archives";
 
 const queryClient = new QueryClient();
 
@@ -24,8 +26,8 @@ const App = () => (
           <Route path="/new-post" element={<NewPost />} />
           <Route path="/about" element={<About />} />
           <Route path="/categories" element={<Categories />} />
-          <Route path="/tags" element={<NotFound />} />
-          <Route path="/archives" element={<NotFound />} />
+          <Route path="/tags" element={<Tags />} />
+          <Route path="/archives" element={<Archives />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

@@ -8,10 +8,17 @@ import { X } from "lucide-react";
 export default function Home() {
   const [searchParams, setSearchParams] = useSearchParams();
   const categoryFilter = searchParams.get("category");
+  const tagFilter = searchParams.get("tag");
 
-  const filteredPosts = categoryFilter
-    ? mockPosts.filter(post => post.categories.includes(categoryFilter))
-    : mockPosts;
+  const filteredPosts = mockPosts.filter(post => {
+    if (categoryFilter) {
+      return post.categories.includes(categoryFilter);
+    }
+    if (tagFilter) {
+      return post.tags.includes(tagFilter);
+    }
+    return true;
+  });
 
   const featuredPost = filteredPosts.find(post => post.featured);
   const regularPosts = filteredPosts.filter(post => !post.featured);
@@ -19,11 +26,13 @@ export default function Home() {
   return (
     <BlogLayout>
       <div className="space-y-8">
-        {categoryFilter && (
+        {(categoryFilter || tagFilter) && (
           <div className="flex items-center gap-2 mb-4">
-            <span className="text-sm text-muted-foreground">Filtered by category:</span>
+            <span className="text-sm text-muted-foreground">
+              Filtered by {categoryFilter ? 'category' : 'tag'}:
+            </span>
             <Badge variant="secondary" className="flex items-center gap-1">
-              {categoryFilter}
+              {categoryFilter ? categoryFilter : `#${tagFilter}`}
               <X
                 className="h-3 w-3 cursor-pointer"
                 onClick={() => setSearchParams({})}
