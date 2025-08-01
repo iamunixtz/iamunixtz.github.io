@@ -14,7 +14,9 @@ import {
   Search,
   PenTool,
   Moon,
-  Sun
+  Sun,
+  Menu,
+  ChevronLeft
 } from "lucide-react";
 import blogLogo from "@/assets/blog-logo.png";
 import profilePic from "@/assets/profile.jpg";
@@ -51,28 +53,47 @@ export default function BlogLayout({ children }: BlogLayoutProps) {
   const location = useLocation();
   const [searchQuery, setSearchQuery] = useState("");
   const [isDarkMode, setIsDarkMode] = useState(false);
+  const [isSidebarOpen, setIsSidebarOpen] = useState(true);
 
   const toggleDarkMode = () => {
     setIsDarkMode(!isDarkMode);
     document.documentElement.classList.toggle('dark');
   };
 
+  const toggleSidebar = () => {
+    setIsSidebarOpen(!isSidebarOpen);
+  };
+
   return (
     <div className="min-h-screen bg-background flex relative">
       <div className="matrix-bg" />
       {/* Sidebar */}
-      <aside className="w-64 bg-blog-sidebar border-r border-blog-sidebar-border flex flex-col">
+      <aside className={cn(
+        "bg-blog-sidebar border-r border-blog-sidebar-border flex flex-col transition-all duration-300 ease-in-out",
+        isSidebarOpen ? "w-64" : "w-16"
+      )}>
+        {/* Toggle Button */}
+        <Button
+          variant="ghost"
+          size="icon"
+          onClick={toggleSidebar}
+          className="absolute -right-4 top-4 z-50 w-8 h-8 rounded-full bg-primary text-primary-foreground shadow-md hover:bg-primary/90"
+        >
+          {isSidebarOpen ? <ChevronLeft className="w-4 h-4" /> : <Menu className="w-4 h-4" />}
+        </Button>
         {/* Logo Section */}
-        <div className="p-6 border-b border-blog-sidebar-border">
+        <div className="p-4 border-b border-blog-sidebar-border">
           <Link to="/" className="flex items-center space-x-3">
-            <div className="relative w-12 h-12 rounded-full overflow-hidden ring-2 ring-primary shadow-md">
+            <div className="relative w-8 h-8 rounded-full overflow-hidden ring-2 ring-primary shadow-md">
               <LazyImage src={profilePic} alt="iamunixt Profile" className="w-full h-full object-cover" />
               <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/30"></div>
             </div>
-            <div>
-              <h1 className="text-xl font-bold text-blog-sidebar-foreground">iamunixt</h1>
-              <p className="text-sm text-blog-sidebar-muted">Cybersecurity Researcher & Bug Hunter</p>
-            </div>
+            {isSidebarOpen && (
+              <div className="overflow-hidden">
+                <h1 className="text-xl font-bold text-blog-sidebar-foreground truncate">iamunixt</h1>
+                <p className="text-sm text-blog-sidebar-muted truncate">Security Researcher</p>
+              </div>
+            )}
           </Link>
         </div>
 
@@ -87,14 +108,16 @@ export default function BlogLayout({ children }: BlogLayoutProps) {
                   <Link
                     to={item.href}
                     className={cn(
-                      "flex items-center space-x-3 px-3 py-2 rounded-lg text-sm font-medium transition-colors",
+                      "flex items-center px-3 py-2 rounded-lg text-sm font-medium transition-colors",
                       isActive
                         ? "bg-primary text-primary-foreground"
-                        : "text-blog-sidebar-foreground hover:bg-blog-sidebar-hover"
+                        : "text-blog-sidebar-foreground hover:bg-blog-sidebar-hover",
+                      isSidebarOpen ? "space-x-3" : "justify-center"
                     )}
+                    title={!isSidebarOpen ? item.name : undefined}
                   >
-                    <Icon className="w-4 h-4" />
-                    <span>{item.name}</span>
+                    <Icon className="w-4 h-4 min-w-[16px]" />
+                    {isSidebarOpen && <span>{item.name}</span>}
                   </Link>
                 </li>
               );
@@ -103,9 +126,11 @@ export default function BlogLayout({ children }: BlogLayoutProps) {
         </nav>
 
         {/* Search */}
-        <div className="p-4 border-t border-blog-sidebar-border">
-          <SearchCommand />
-        </div>
+        {isSidebarOpen && (
+          <div className="p-4 border-t border-blog-sidebar-border">
+            <SearchCommand />
+          </div>
+        )}
 
         {/* Theme Toggle */}
         <div className="p-4 border-t border-blog-sidebar-border">
@@ -113,10 +138,14 @@ export default function BlogLayout({ children }: BlogLayoutProps) {
             variant="ghost"
             size="sm"
             onClick={toggleDarkMode}
-            className="w-full justify-start"
+            className={cn(
+              "w-full",
+              isSidebarOpen ? "justify-start" : "justify-center px-0"
+            )}
+            title={!isSidebarOpen ? (isDarkMode ? "Light Mode" : "Dark Mode") : undefined}
           >
-            {isDarkMode ? <Sun className="w-4 h-4 mr-2" /> : <Moon className="w-4 h-4 mr-2" />}
-            {isDarkMode ? "Light Mode" : "Dark Mode"}
+            {isDarkMode ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
+            {isSidebarOpen && <span className="ml-2">{isDarkMode ? "Light Mode" : "Dark Mode"}</span>}
           </Button>
         </div>
       </aside>

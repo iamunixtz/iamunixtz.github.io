@@ -39,44 +39,50 @@ All colors MUST be HSL.
   }
 
   :root {
-    /* Cybersecurity-themed color palette */
-    --background: 220 13% 10%;
-    --foreground: 120 100% 86%;
+    /* Base theme colors - Dark cyberpunk inspired */
+    --background: 230 20% 11%;    /* Deep blue-black */
+    --foreground: 155 50% 85%;    /* Soft cyber mint */
 
-    --card: 220 13% 15%;
-    --card-foreground: 120 100% 86%;
+    --card: 230 20% 15%;         /* Slightly lighter background */
+    --card-foreground: 155 50% 85%;
 
-    --popover: 220 13% 15%;
-    --popover-foreground: 120 100% 86%;
+    --popover: 230 20% 15%;
+    --popover-foreground: 155 50% 85%;
 
-    --primary: 120 100% 45%;
-    --primary-foreground: 220 13% 10%;
-    --primary-hover: 120 100% 40%;
+    /* Primary - Terminal green */
+    --primary: 135 75% 45%;      /* Matrix-inspired green */
+    --primary-foreground: 230 20% 11%;
+    --primary-hover: 135 75% 40%;
 
-    --secondary: 220 13% 20%;
-    --secondary-foreground: 120 100% 86%;
+    /* Secondary - Cyber blue */
+    --secondary: 210 80% 25%;    /* Deep electric blue */
+    --secondary-foreground: 155 50% 85%;
 
-    --muted: 220 13% 25%;
-    --muted-foreground: 120 100% 75%;
+    /* Muted - Subdued interface elements */
+    --muted: 230 20% 20%;       /* Slightly lighter than background */
+    --muted-foreground: 155 30% 65%;
 
-    --accent: 160 100% 45%;
-    --accent-foreground: 220 13% 10%;
+    /* Accent - Neon cyan */
+    --accent: 180 90% 50%;      /* Bright cyber cyan */
+    --accent-foreground: 230 20% 11%;
 
-    --destructive: 0 84% 60%;
+    /* Destructive - Cyber red */
+    --destructive: 355 90% 50%;  /* Warning/error red */
     --destructive-foreground: 0 0% 100%;
 
-    --border: 220 13% 20%;
-    --input: 220 13% 20%;
-    --ring: 120 100% 45%;
+    /* Interface elements */
+    --border: 230 30% 25%;      /* Subtle borders */
+    --input: 230 30% 25%;       /* Form elements */
+    --ring: 180 90% 50%;        /* Focus rings - matching accent */
 
     --radius: 0.75rem;
 
-    /* Blog-specific tokens */
-    --blog-sidebar: 220 13% 12%;
-    --blog-sidebar-foreground: 120 100% 86%;
-    --blog-sidebar-muted: 120 100% 75%;
-    --blog-sidebar-border: 220 13% 20%;
-    --blog-sidebar-hover: 220 13% 25%;
+    /* Blog-specific interface elements */
+    --blog-sidebar: 230 25% 13%;      /* Slightly different from main bg */
+    --blog-sidebar-foreground: 155 50% 85%;
+    --blog-sidebar-muted: 155 30% 65%;
+    --blog-sidebar-border: 230 30% 25%;
+    --blog-sidebar-hover: 210 80% 25%; /* Secondary color for hover */
 
     --blog-post-meta: 220 9% 46%;
     --blog-tag: 217 91% 95%;
