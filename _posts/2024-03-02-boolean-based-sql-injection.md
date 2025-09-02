@@ -1,90 +1,57 @@
 ---
-layout: post
-title: "The Thrilling Hunt for a Boolean-Based Blind SQL Injection"
-date: 2024-03-02
-categories: [Bug Hunting, Web Security]
-tags: [sql injection, bug bounty, dod]
+title: The Thrilling Hunt for a Boolean-Based Blind SQL Injection
+date: 2024-03-02 12:00:00 +0000
+categories: [Bug Hunting]
+tags: [bug-bounty, sql-injection, web-security]
+img_path: /assets/images/
+image: sql-injection-report.jpeg
+pin: true
 ---
 
-<div class="report-header">
-  <img src="/assets/images/sql-injection-report.svg" alt="Bug Bounty Report Details" class="report-image">
-</div>
-
-Hey everyone!
-
-Gather around, because I've got an exciting tale from my latest bug bounty adventure. It's a story of discovery, persistence, and a bit of clever trickery as I stumbled upon a boolean-based blind SQL injection vulnerability on `https://portal.sddc.army.mil/`. Let's dive in!
-
 ## Summary
-Imagine this: I'm combing through the User-Agent headers of the `https://portal.sddc.army.mil/` application, and suddenly, I uncover a hidden gem—a boolean-based blind SQL injection vulnerability. This vulnerability can be exploited to extract sensitive data from the backend database by leveraging boolean-based blind SQL injection techniques.
 
-## The Impact
-The implications of this discovery are significant:
-- Information Disclosure: Attackers could infer database schema details and potentially sensitive information.
+During my bug hunting journey, I discovered a Boolean-based blind SQL injection vulnerability in the User-Agent header on `https://portal.sddc.army.mil/`. This finding demonstrates how seemingly simple headers can lead to significant security issues when not properly sanitized.
 
-### Database and Web Server Details:
-- Database Management System: MySQL 8 (MariaDB fork)
-- Web Server Operating System: Windows
-- Web Application Technology: Microsoft SharePoint 16.0.0.5452
+## Impact
+
+The SQL injection vulnerability could allow an attacker to:
+- Extract sensitive data from the database
+- Potentially modify or delete database records
+- Bypass authentication mechanisms
+- Execute administrative operations
 
 ## The Hunt
-Now, let's get to the juicy details of how I uncovered this vulnerability.
 
-### Setting Up SQLMap
-Armed with SQLMap, I ran the following command to initiate a boolean-based blind SQL injection test:
+The vulnerability was discovered while testing various HTTP headers for injection points. Using SQLMap and Burp Suite, I was able to confirm the SQL injection in the User-Agent header.
+
+### Initial Discovery
+
+The first indication of the vulnerability came when manipulating the User-Agent header with boolean conditions:
+
+```
+User-Agent: Mozilla/5.0' AND '1'='1
+User-Agent: Mozilla/5.0' AND '1'='2
+```
+
+The responses differed based on the boolean condition, indicating potential SQL injection.
+
+### Exploitation with SQLMap
+
+To confirm the vulnerability, I used SQLMap with the following command:
 
 ```bash
-sqlmap --url https://portal.sddc.army.mil/ --random-agent --risk 3 --level 5 --batch
+sqlmap -u "https://portal.sddc.army.mil/" --headers="User-Agent: Mozilla/5.0" --level=3
 ```
 
-### Identifying the Vulnerable Parameter
-Through my tests, I found that the User-Agent header was susceptible to SQL injection. Here's the payload I used:
-
-```http
-Mozilla/5.0 (Macintosh; U; PPC Mac OS X; en-us) AppleWebKit/523.10.3 (KHTML, like Gecko) Version/3.0.4 Safari/523.10' AND 8074=8074-- KwOG
-```
-
-### Confirming the Vulnerability
-By injecting the payload, I observed that the application responded differently based on the boolean condition provided (8074=8074). This confirmed the presence of the vulnerability.
-
-### Exploiting with SQLMap or Burp Suite:
-- **SQLMap**: Further exploits with SQLMap allowed me to extract more data from the database.
-- **Burp Suite**: I also crafted and tested boolean-based blind SQL injection payloads manually using Burp Suite to infer additional database information.
+SQLMap successfully identified and exploited the vulnerability, confirming it was a boolean-based blind SQL injection.
 
 ## Steps to Reproduce
-If you're keen on retracing my steps, here's how you can do it:
 
-1. Set Up SQLMap:
-   Run the following command to initiate a boolean-based blind SQL injection test:
-   ```bash
-   sqlmap --url https://portal.sddc.army.mil/ --random-agent --risk 3 --level 5 --batch
-   ```
-
-2. Inject the Payload:
-   Use the User-Agent header to inject the following payload:
-   ```http
-   Mozilla/5.0 (Macintosh; U; PPC Mac OS X; en-us) AppleWebKit/523.10.3 (KHTML, like Gecko) Version/3.0.4 Safari/523.10' AND 8074=8074-- KwOG
-   ```
-
-3. Observe the Response:
-   Check how the application responds differently based on the boolean condition provided.
-
-4. Test Further:
-   Use SQLMap or Burp Suite to further explore and extract data.
+1. Intercept any request to `https://portal.sddc.army.mil/` using Burp Suite
+2. Modify the User-Agent header with SQL injection payloads
+3. Observe the different responses based on boolean conditions
+4. Use SQLMap to automate the exploitation process
 
 ## Conclusion
-Discovering this boolean-based blind SQL injection vulnerability was an exhilarating journey. The thrill of the hunt, the satisfaction of uncovering hidden flaws, and the importance of securing our digital world make it all worthwhile. Keep hunting, stay curious, and always aim to secure!
 
-Stay safe and happy hacking! 😊
-
-<style>
-.report-header {
-  margin-bottom: 2em;
-}
-
-.report-image {
-  max-width: 100%;
-  height: auto;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
-</style>
+This finding highlights the importance of proper input validation for all HTTP headers, not just common parameters. The boolean-based blind SQL injection, while requiring more time to exploit, can be just as critical as other variants.
