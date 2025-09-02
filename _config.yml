@@ -1,0 +1,44 @@
+title: Iamunixtz's Security Blog
+description: Journey of an African Bug Hunter | API Hacking | Malware Analysis | Reverse Engineering
+baseurl: ""
+url: ""
+twitter_username: iamunixtz
+github_username: iamunixtz
+
+# Build settings
+theme: jekyll-theme-hacker
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# Author settings
+author:
+  name: Iamunixtz
+  bio: African Bug Hunter | Reverse Engineer | Digital Explorer
+  logo: /assets/images/profile-mask.svg
+
+# Site settings
+show_excerpts: true
+header_pages:
+  - about.md
+
+# Categories
+categories:
+  - Bug Hunting
+  - Reverse Engineering
+  - Zero Day Research
+  - N-Day Research
+  - Web Security
+  - API Security
+  - Malware Analysis
+
+# Default front matter
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      author: "Iamunixtz"
