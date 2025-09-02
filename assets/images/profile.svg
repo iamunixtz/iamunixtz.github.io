@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <!-- Dark background with mask effect -->
+  <defs>
+    <mask id="mask">
+      <circle cx="200" cy="200" r="180" fill="white"/>
+    </mask>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="400" height="400" fill="#1a1b26"/>
+  
+  <!-- Masked image representation -->
+  <g mask="url(#mask)">
+    <!-- Stylized mask representation -->
+    <rect x="100" y="120" width="200" height="160" fill="#ff6b6b"/>
+    <circle cx="200" cy="180" r="40" fill="#ffd93d"/>
+    <path d="M140,220 Q200,280 260,220" stroke="#4a4e69" stroke-width="8" fill="none"/>
+  </g>
+  
+  <!-- Glowing effect -->
+  <circle cx="200" cy="200" r="180" stroke="#00f5d4" stroke-width="4" fill="none" opacity="0.6">
+    <animate attributeName="opacity" values="0.6;0.2;0.6" dur="2s" repeatCount="indefinite"/>
+  </circle>
+</svg>
