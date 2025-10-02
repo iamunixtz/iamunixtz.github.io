@@ -6,7 +6,7 @@ import { HashRouter, Routes, Route, Navigate } from "react-router-dom";
 import { Suspense, lazy } from "react";
 import { Loader2 } from "lucide-react";
 import { ThemeProvider } from "@/components/ThemeProvider";
-import "./styles/theme.css";
+import "./styles/monochrome-theme.css";
 
 // Lazy load components
 const Home = lazy(() => import("./pages/Home"));
