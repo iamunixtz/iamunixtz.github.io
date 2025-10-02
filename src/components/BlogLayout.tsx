@@ -6,6 +6,7 @@ import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
 import { SearchCommand } from "@/components/SearchCommand";
 import { LazyImage } from "@/components/LazyImage";
+import { useTheme } from "./ThemeProvider";
 import { 
   Home, 
   FolderOpen, 

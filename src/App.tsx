@@ -5,8 +5,8 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { HashRouter, Routes, Route, Navigate } from "react-router-dom";
 import { Suspense, lazy } from "react";
 import { Loader2 } from "lucide-react";
-import { ThemeProvider } from "next-themes";
-import "./styles/cyber-theme.css";
+import { ThemeProvider } from "@/components/ThemeProvider";
+import "./styles/theme.css";
 
 // Lazy load components
 const Home = lazy(() => import("./pages/Home"));
@@ -28,7 +28,7 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <ThemeProvider defaultTheme="dark" attribute="class">
+      <ThemeProvider defaultTheme="dark">
         <HashRouter basename="/">
           <Suspense fallback={<LoadingSpinner />}>
             <Routes>

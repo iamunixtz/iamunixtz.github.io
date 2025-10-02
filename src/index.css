@@ -39,20 +39,34 @@ All colors MUST be HSL.
   }
 
   :root {
-    /* Base theme colors - Aggressive cyber theme */
-    --background: 220 30% 8%;     /* Deeper, darker background */
-    --foreground: 120 100% 85%;   /* Bright matrix green */
+    /* Light mode colors */
+    --background: 0 0% 98%;
+    --foreground: 240 10% 3.9%;
+    
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+    
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+    
+    --primary: 142 76% 36%;
+    --primary-foreground: 355.7 100% 97.3%;
+    --primary-hover: 142 76% 32%;
 
-    --card: 220 25% 12%;          /* Card background */
-    --card-foreground: 120 100% 85%;
-
-    --popover: 220 25% 12%;
-    --popover-foreground: 120 100% 85%;
-
-    /* Primary - Neon green */
-    --primary: 120 100% 50%;      /* Bright neon green */
-    --primary-foreground: 220 30% 8%;
-    --primary-hover: 120 100% 45%;
+    .dark {
+        --background: 240 10% 3.9%;
+        --foreground: 0 0% 98%;
+        
+        --card: 240 10% 3.9%;
+        --card-foreground: 0 0% 98%;
+        
+        --popover: 240 10% 3.9%;
+        --popover-foreground: 0 0% 98%;
+        
+        --primary: 142 76% 36%;
+        --primary-foreground: 355.7 100% 97.3%;
+        --primary-hover: 142 76% 32%;
+    }
 
     /* Secondary - Dark elements */
     --secondary: 220 25% 15%;     /* Slightly lighter than background */

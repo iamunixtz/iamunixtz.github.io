@@ -1,0 +1,50 @@
+/* Light mode */
+:root {
+  --background: 0 0% 100%;
+  --foreground: 220 30% 10%;
+  
+  --card: 0 0% 98%;
+  --card-foreground: 220 30% 10%;
+  
+  --sidebar: 220 20% 97%;
+  --sidebar-foreground: 220 30% 10%;
+  --sidebar-muted: 220 20% 50%;
+  --sidebar-hover: 220 20% 92%;
+  
+  --primary: 220 90% 50%;
+  --primary-foreground: 0 0% 100%;
+  
+  --accent: 340 90% 50%;
+  --accent-foreground: 0 0% 100%;
+  
+  --border: 220 20% 90%;
+  --ring: 220 90% 50%;
+}
+
+/* Dark mode */
+[data-theme="dark"] {
+  --background: 220 30% 8%;
+  --foreground: 220 20% 90%;
+  
+  --card: 220 30% 12%;
+  --card-foreground: 220 20% 90%;
+  
+  --sidebar: 220 30% 10%;
+  --sidebar-foreground: 220 20% 90%;
+  --sidebar-muted: 220 20% 60%;
+  --sidebar-hover: 220 30% 15%;
+  
+  --primary: 135 75% 45%;
+  --primary-foreground: 220 30% 8%;
+  
+  --accent: 0 90% 60%;
+  --accent-foreground: 220 30% 8%;
+  
+  --border: 220 30% 20%;
+  --ring: 135 75% 45%;
+}
+
+/* Transitions */
+* {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
