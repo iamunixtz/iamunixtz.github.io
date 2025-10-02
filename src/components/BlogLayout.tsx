@@ -85,12 +85,12 @@ export default function BlogLayout({ children }: BlogLayoutProps) {
         <div className="p-4 border-b border-blog-sidebar-border">
           <Link to="/" className="flex items-center space-x-3">
             <div className="relative w-8 h-8 rounded-full overflow-hidden ring-2 ring-primary shadow-md">
-              <LazyImage src={profilePic} alt="iamunixt Profile" className="w-full h-full object-cover" />
+              <LazyImage src={profilePic} alt="iamunixtz Profile" className="w-full h-full object-cover" />
               <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/30"></div>
             </div>
             {isSidebarOpen && (
               <div className="overflow-hidden">
-                <h1 className="text-xl font-bold text-blog-sidebar-foreground truncate">iamunixt</h1>
+                <h1 className="text-xl font-bold text-blog-sidebar-foreground truncate">iamunixtz</h1>
                 <p className="text-sm text-blog-sidebar-muted truncate">Security Researcher</p>
               </div>
             )}
