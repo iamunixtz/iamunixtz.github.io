@@ -33,68 +33,61 @@ export default function PostCard({
   return (
     <article 
       className={cn(
-        "bg-gradient-card rounded-lg shadow-card hover:shadow-card-hover transition-all duration-300 overflow-hidden group",
-        featured && "ring-2 ring-primary/20"
+        "bg-background border border-border hover:border-primary/50 rounded-lg overflow-hidden group",
+        "dark:bg-background/50 dark:backdrop-blur-sm dark:hover:bg-background/80",
+        "transition-all duration-300",
+        featured && "ring-1 ring-primary"
       )}
     >
       {image && (
-        <div className="aspect-video overflow-hidden">
+        <div className="relative aspect-[2/1] overflow-hidden">
           <LazyImage
             src={image}
             alt={title}
-            className="w-full h-full group-hover:scale-105 transition-transform duration-300"
+            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
           />
+          <div className="absolute inset-0 bg-gradient-to-t from-background/90 to-transparent" />
         </div>
       )}
       
       <div className="p-6">
-        {/* Categories */}
-        <div className="flex flex-wrap gap-2 mb-2">
-          {categories.map((category) => (
-            <Link key={category} to={`/?category=${encodeURIComponent(category)}`}>
-              <Badge variant="secondary" className="hover:bg-secondary/80">
-                {category}
-              </Badge>
-            </Link>
-          ))}
-        </div>
-
-        {/* Tags */}
-        <div className="flex flex-wrap gap-2 mb-3">
-          {tags.map((tag) => (
-            <Badge
-              key={tag}
-              variant="secondary"
-              className="bg-blog-tag text-blog-tag-foreground text-xs"
-            >
-              {tag}
-            </Badge>
-          ))}
+        {/* Date and Categories */}
+        <div className="flex flex-wrap items-center gap-3 mb-3">
+          <time className="text-sm text-muted-foreground font-mono">
+            {date}
+          </time>
+          <div className="flex flex-wrap gap-2">
+            {categories.map((category) => (
+              <Link key={category} to={`/?category=${encodeURIComponent(category)}`}>
+                <Badge 
+                  variant="outline"
+                  className="bg-primary/5 text-primary border-primary/20 hover:bg-primary/10 transition-colors"
+                >
+                  {category}
+                </Badge>
+              </Link>
+            ))}
+          </div>
         </div>
 
         {/* Title */}
-        <h2 className="text-xl font-bold mb-3 group-hover:text-primary transition-colors">
-          <Link to={`/post/${id}`} className="block">
+        <Link to={`/post/${id}`}>
+          <h2 className="text-xl font-bold mb-3 text-foreground group-hover:text-primary transition-colors line-clamp-2">
             {title}
-          </Link>
-        </h2>
+          </h2>
+        </Link>
 
         {/* Excerpt */}
-        <p className="text-muted-foreground mb-4 line-clamp-3">
+        <p className="text-muted-foreground mb-4 line-clamp-2 text-sm">
           {excerpt}
         </p>
 
         {/* Meta Information */}
-        <div className="flex items-center gap-4 text-sm text-blog-post-meta">
-          <div className="flex items-center gap-1">
-            <Calendar className="w-4 h-4" />
-            <span>{date}</span>
+        <div className="flex items-center gap-4 text-xs text-muted-foreground/80">
+          <div className="flex items-center gap-2">
+            <Clock className="w-3 h-3" />
+            <span>{readTime}</span>
           </div>
-          <div className="flex items-center gap-1">
-            <User className="w-4 h-4" />
-            <span>{author}</span>
-          </div>
-          <div className="flex items-center gap-1">
             <Clock className="w-4 h-4" />
             <span>{readTime}</span>
           </div>

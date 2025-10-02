@@ -39,55 +39,66 @@ All colors MUST be HSL.
   }
 
   :root {
-    /* Light mode colors */
-    --background: 0 0% 98%;
-    --foreground: 240 10% 3.9%;
-    
-    --card: 0 0% 100%;
+    /* Base theme colors - Clean dark theme */
+    --background: 0 0% 100%;      /* Pure white for light mode */
+    --foreground: 240 10% 3.9%;   /* Almost black for text */
+
+    --card: 0 0% 100%;            /* White cards for light mode */
     --card-foreground: 240 10% 3.9%;
-    
-    --popover: 0 0% 100%;
-    --popover-foreground: 240 10% 3.9%;
-    
-    --primary: 142 76% 36%;
-    --primary-foreground: 355.7 100% 97.3%;
-    --primary-hover: 142 76% 32%;
 
     .dark {
-        --background: 240 10% 3.9%;
-        --foreground: 0 0% 98%;
-        
-        --card: 240 10% 3.9%;
-        --card-foreground: 0 0% 98%;
-        
-        --popover: 240 10% 3.9%;
-        --popover-foreground: 0 0% 98%;
-        
-        --primary: 142 76% 36%;
-        --primary-foreground: 355.7 100% 97.3%;
-        --primary-hover: 142 76% 32%;
+      --background: 240 10% 3.9%;  /* Almost black for dark mode */
+      --foreground: 0 0% 98%;      /* Almost white text */
+      
+      --card: 240 10% 3.9%;        /* Dark cards */
+      --card-foreground: 0 0% 98%;
     }
 
-    /* Secondary - Dark elements */
-    --secondary: 220 25% 15%;     /* Slightly lighter than background */
-    --secondary-foreground: 120 100% 85%;
+    --popover: 220 25% 12%;
+    --popover-foreground: 120 100% 85%;
 
-    /* Muted - Terminal-like elements */
-    --muted: 220 30% 18%;         /* Muted background */
-    --muted-foreground: 120 60% 70%;
+    /* Primary - Neon green */
+    --primary: 120 100% 50%;      /* Bright neon green */
+    --primary-foreground: 220 30% 8%;
+    --primary-hover: 120 100% 45%;
 
-    /* Accent - Red for emphasis */
-    --accent: 0 100% 60%;         /* Cyber red */
-    --accent-foreground: 220 30% 8%;
+    /* Secondary colors */
+    --secondary: 240 5% 96%;      /* Light gray for light mode */
+    --secondary-foreground: 240 10% 3.9%;
+
+    /* Muted colors */
+    --muted: 240 5% 96%;          /* Light gray background */
+    --muted-foreground: 240 4% 46%;
+
+    /* Accent colors */
+    --accent: 240 5% 96%;         /* Light gray accent */
+    --accent-foreground: 240 10% 3.9%;
+
+    .dark {
+      --secondary: 240 4% 16%;    /* Dark gray for dark mode */
+      --secondary-foreground: 0 0% 98%;
+
+      --muted: 240 4% 16%;        /* Dark gray background */
+      --muted-foreground: 240 5% 64.9%;
+
+      --accent: 240 4% 16%;       /* Dark gray accent */
+      --accent-foreground: 0 0% 98%;
+    }
 
     /* Destructive - Cyber red */
     --destructive: 355 90% 50%;  /* Warning/error red */
     --destructive-foreground: 0 0% 100%;
 
     /* Interface elements */
-    --border: 230 30% 25%;      /* Subtle borders */
-    --input: 230 30% 25%;       /* Form elements */
-    --ring: 180 90% 50%;        /* Focus rings - matching accent */
+    --border: 240 6% 90%;       /* Light mode borders */
+    --input: 240 6% 90%;        /* Light mode inputs */
+    --ring: 240 5% 64.9%;       /* Focus rings */
+
+    .dark {
+      --border: 240 4% 16%;     /* Dark mode borders */
+      --input: 240 4% 16%;      /* Dark mode inputs */
+      --ring: 240 4% 16%;       /* Dark mode focus rings */
+    }
 
     --radius: 0.75rem;
 
