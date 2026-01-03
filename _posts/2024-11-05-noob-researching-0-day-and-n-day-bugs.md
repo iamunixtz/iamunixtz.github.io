@@ -10,4 +10,4 @@ Here I document my research into 0-day and N-day vulnerabilities, tool developme
 
 ## Posts in this category:
 
-*   [Burpsuite Pwn](burpsuite-pwn.md)
+*   [Burpsuite Pwn](/posts/burpsuite-pwn/)
