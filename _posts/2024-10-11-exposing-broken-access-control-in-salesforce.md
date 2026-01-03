@@ -5,14 +5,4 @@ categories: [Bug Hunting]
 tags: [bughunting, cybersecurity]
 ---
 
-
-![image](/assets/img/bughunting_image_0.png)
-
-### Vulnerability
-Discovered that public Aura endpoints (`/aura`, `/sfsites/aura`) were exposed to unauthenticated guest users in Salesforce.
-
-### Technical Breakdown
-Used a Python script to query Salesforce objects like `User` and `ContentDocument`, retrieving sensitive metadata and emails.
-
-### Root Cause
-Over-permissioned Guest User Profiles in the Salesforce configuration.
+* [Iamunix | BugHunter | Hackers](https://unixtz.gitbook.io/blog)\n* [BugHunting](https://unixtz.gitbook.io/blog/readme/bughunting)\n# Exposing Broken Access Control in Salesforce: How Public Aura Endpoints Leaked Sensitive Data\n\nHow I Discovered a Broken Access Control Vulnerability that Leaked Sensitive Data\n\n![image](/assets/img/exposing_broken_acce_0.jpg)\n\nHello Folks \n\nWhile exploring Salesforce deployments during a focused research session, I uncovered a significant misconfiguration that allowed **unauthenticated access to internal Salesforce data** through publicly exposed Aura endpoints.\n\n...\n\n

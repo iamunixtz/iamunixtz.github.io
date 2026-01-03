@@ -5,17 +5,4 @@ categories: [Bug Hunting]
 tags: [bughunting, cybersecurity]
 ---
 
-
-![image](/assets/img/bughunting_image_0.jpg)
-
-## Hey everyone!
-
-I stumbled upon a vulnerability on sample.com—an Improper Access Control that was leaking sensitive user information.
-
-### The Vulnerable Endpoints
-- **Users Endpoint:** Revealed emails, phone numbers, IDs, and login activity.
-- **Videos Endpoint:** Accessible private videos.
-- **Comments Endpoint:** Metadata exposure.
-
-### Discovery
-I found unauthenticated access was possible for these endpoints, and regular user accounts could gain admin-level data access.
+* [Iamunix | BugHunter | Hackers](https://unixtz.gitbook.io/blog)\n* [BugHunting](https://unixtz.gitbook.io/blog/readme/bughunting)\n# Exposing Broken Access Control in Salesforce: How Public Aura Endpoints Leaked Sensitive Data\n\nHow I Discovered a Broken Access Control Vulnerability that Leaked Sensitive Data\n\n![image](/assets/img/exposing_broken_acce_0.jpg)\n\nHello Folks \n\nWhile exploring Salesforce deployments during a focused research session, I uncovered a significant misconfiguration that allowed **unauthenticated access to internal Salesforce data** through publicly exposed Aura endpoints.\n\n...\n\n

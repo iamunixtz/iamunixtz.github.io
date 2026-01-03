@@ -5,14 +5,4 @@ categories: [Bug Hunting]
 tags: [bughunting, cybersecurity]
 ---
 
-
-![image](/assets/img/bughunting_image_0.jpg)
-
-### Summary
-Discovered a boolean-based blind SQL injection on `https://portal.sddc.army.mil/` via the `User-Agent` header.
-
-### Impact
-Information disclosure of database schema and server details (MySQL 8/MariaDB on Windows using SharePoint).
-
-### Steps to Reproduce
-Used `sqlmap` with `--level 5 --risk 3` and a payload like `' AND 8074=8074--`.
+# The Thrilling Hunt for a Boolean-Based Blind SQL Injection\n\n![image](/assets/img/the_thrilling_hunt_f_0.jpg)\n\n**Hey everyone!**\n\nI uncover a hidden gem—a boolean-based blind SQL injection vulnerability on `https://portal.sddc.army.mil/` in the `User-Agent` headers.\n\n### The Impact:\n* **Information Disclosure:** Attackers could infer database schema details.\n* **Tech Stack:** MySQL 8, Windows, Microsoft SharePoint 16.0.0.5452.\n\n### The Hunt:\n* **Payload:** `Mozilla/5.0 ... Safari/523.10' AND 8074=8074-- KwOG`

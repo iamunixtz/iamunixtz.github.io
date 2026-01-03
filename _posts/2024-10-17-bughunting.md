@@ -5,23 +5,4 @@ categories: [Bug Hunting]
 tags: [bughunting, cybersecurity]
 ---
 
-
-## My Bug Hunting Journey: From Zero to Hero
-
-![Banner](/assets/img/bughunting_index_image_0.jpg)
-
-I started bug hunting back in **July 2023** on HackerOne. At first, I was just exploring, trying to understand how things work. My first valid report was marked as **informative**, but that didn't stop me. I kept learning.
-
-### The First Win
-
-It wasn't until **September 2024** that I found my first paid bounty. I discovered a **Blind SQL Injection** on a Department of Defense (DoD) platform. 
-
-![First Bounty](/assets/img/bughunting_index_image_1.jpg)
-
-Since then, I've earned over **$2,000** in bounties in just five months.
-
-![Bugz](/assets/img/bughunting_index_image_2.jpg)
-
-### Resources Used
-- PortSwigger Labs
-- APIsec University
+# BugHunting\n\nMy Bug Hunting Journey: From Zero to Hero\n\n```\n// "Every expert was once a beginner. Every hacker once submitted an 'informative' bug."a\n```\n\nHey there, fellow bughunters! 🐞 It's time to dive into the bug-hunting journey of someone who's been in your shoes—me!...\n\nChapter 1: The Humble Beginnings...\nChapter 2: The Naive Submissions...\nChapter 3: The First Real Catch...\nChapter 5: The Game-Changer (September 4, 2024)...

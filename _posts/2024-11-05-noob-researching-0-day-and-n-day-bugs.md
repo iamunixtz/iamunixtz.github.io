@@ -5,9 +5,4 @@ categories: [Noob Researching]
 tags: [noobresearching, cybersecurity]
 ---
 
-
-Here I document my research into 0-day and N-day vulnerabilities, tool development, and exploring new attack vectors.
-
-## Posts in this category:
-
-*   [Burpsuite Pwn](/posts/burpsuite-pwn/)
+# Noob Researching 0 day and N day Bugs.\n\n[Burpsuite Pwn](https://unixtz.gitbook.io/blog/readme/noob-researching-0-day-and-n-day-bugs./burpsuite-pwn)
