@@ -5,17 +5,8 @@ categories: [Bug Hunting]
 tags: [bughunting, cybersecurity]
 ---
 
-# BugHunting
+Hey there, fellow bughunters! 🐞 It's time to dive into the bug-hunting journey... [Chapter 1-7 detail from July 2023 beginnings to first $2k bounty in September 2024].
 
-My Bug Hunting Journey: From Zero to Hero
+![image](/assets/img/bughunting_0.jpg)
 
-```
-// "Every expert was once a beginner. Every hacker once submitted an 'informative' bug."a
-```
-
-Hey there, fellow bughunters! 🐞 It's time to dive into the bug-hunting journey of someone who's been in your shoes—me!...
-
-Chapter 1: The Humble Beginnings...
-Chapter 2: The Naive Submissions...
-Chapter 3: The First Real Catch...
-Chapter 5: The Game-Changer (September 4, 2024)...
+![image](/assets/img/bughunting_1.jpg)

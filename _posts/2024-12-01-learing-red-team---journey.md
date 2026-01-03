@@ -5,9 +5,9 @@ categories: [Red Team Journey]
 tags: [redteamjourney, cybersecurity]
 ---
 
-# Learing Red Team - Journey
-
 ![image](/assets/img/learing_red_team_-_j_0.jpg)
 
-[ are supported natively](https://iframely.com/).
+Learing Red Team - Journey
+
+are supported natively.
 

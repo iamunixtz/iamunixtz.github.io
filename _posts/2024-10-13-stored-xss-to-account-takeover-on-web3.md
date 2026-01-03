@@ -5,14 +5,8 @@ categories: [Bug Hunting]
 tags: [bughunting, cybersecurity]
 ---
 
-# How I Found a Stored XSS That Led to Account Takeover on a Web3 Platform
+I stumble upon something extraordinary... A vulnerability so subtle yet powerful, it could redirect unsuspecting users to malicious websites... [Details of MyTrainPal redirect and cookie theft via next parameter].
 
-## 
+<iframe src="https://cdn.iframe.ly/hz80rRp" style="width:100%; height:400px; border:none;"></iframe>
 
-![image](/assets/img/how_i_found_a_stored_0.jpg)
-
-Hey hunters, hope you’re all doing well.
-Today I want to share my story about how I discovered a Stored XSS vulnerability that allowed full account takeover (ATO) on a Web3 website.
-
-...
-
+![image](/assets/img/open_redirect_to_acc_0.jpg)

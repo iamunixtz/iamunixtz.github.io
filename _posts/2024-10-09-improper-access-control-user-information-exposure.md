@@ -5,15 +5,6 @@ categories: [Bug Hunting]
 tags: [bughunting, cybersecurity]
 ---
 
-# Exposing Broken Access Control in Salesforce: How Public Aura Endpoints Leaked Sensitive Data
-
-How I Discovered a Broken Access Control Vulnerability that Leaked Sensitive Data
+I uncovered a significant misconfiguration that allowed unauthenticated access to internal Salesforce data through publicly exposed Aura endpoints... [Technical breakdown of Aura framework and Python PoC for data extraction].
 
 ![image](/assets/img/exposing_broken_acce_0.jpg)
-
-Hello Folks 
-
-While exploring Salesforce deployments during a focused research session, I uncovered a significant misconfiguration that allowed **unauthenticated access to internal Salesforce data** through publicly exposed Aura endpoints.
-
-...
-

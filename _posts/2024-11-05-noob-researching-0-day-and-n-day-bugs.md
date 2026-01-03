@@ -5,6 +5,7 @@ categories: [Noob Researching]
 tags: [noobresearching, cybersecurity]
 ---
 
-# Noob Researching 0 day and N day Bugs.
-
 [Burpsuite Pwn](https://unixtz.gitbook.io/blog/readme/noob-researching-0-day-and-n-day-bugs./burpsuite-pwn)
+
+
+
