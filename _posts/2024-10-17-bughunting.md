@@ -7,9 +7,9 @@ tags: [bughunting, cybersecurity]
 
 Hey there, fellow bughunters! 🐞 It's time to dive into the bug-hunting journey of someone who's been in your shoes—me! So grab a cup of coffee, sit back, and let's embark on this thrilling adventure, full of highs, lows, and a sprinkle of humor.
 
-![image](/assets/img/bughunting_0.jpg)
+![Bug hunting journey](/assets/img/bughunting_0.jpg)
 
-![image](/assets/img/bughunting_1.jpg)
+![On the hunt](/assets/img/bughunting_1.jpg)
 
 ## Chapter 1: The Humble Beginnings
 
@@ -28,6 +28,8 @@ Then came the glorious day I found my first real bug—a blind SQL injection on 
 But as we know, bug hunting isn't all rainbows and butterflies. Months dragged on, with only sparse bugs on the Vulnerability Disclosure Programs (VDPs). Cue the dramatic music as I realized I needed financial wins, not just glory. My dreams of rolling in bounties seemed dim… until September!
 
 ## Chapter 5: The Game-Changer
+
+![First bounty](/assets/img/bughunting_index_image_0.jpg)
 
 September 4, 2024, is a date forever etched in my memory. My first paid bounty from a Bug Bounty Program (BBP)! Finding a Broken Access Control vulnerability that allowed me to see all users' info via the endpoint! 🕺💃 I'll spill the deets in another blog, I promise!
 

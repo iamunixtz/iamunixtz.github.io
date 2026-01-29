@@ -9,7 +9,7 @@ tags: [noobresearching, cybersecurity]
 
 I’m a bug hunter, and, well, I was bored... My HackerOne profile was looking kinda sad with no fresh bounties, so I thought, "Why not do some noob research and see what happens?" So here we are. I went down the rabbit hole of Burp Suite extensions and stumbled upon something that could turn Burp into a full-blown attack vector. Buckle up—this one's gonna be fun.
 
-![image](/assets/img/burpsuite_pwn_0.jpg)
+![Burp Suite – malicious extension risk](/assets/img/burpsuite_pwn_0.jpg)
 
 <iframe src="https://cdn.iframe.ly/VVatOCB" style="width:100%; height:400px; border:none;"></iframe>
 

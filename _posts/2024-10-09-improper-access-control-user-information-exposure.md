@@ -9,7 +9,7 @@ tags: [bughunting, cybersecurity]
 
 So, let me take you on a little journey of discovery. It all started with a curious mind and a knack for uncovering the unseen. During one of my recent bug hunts, I stumbled upon a vulnerability on sample.com—an Improper Access Control that was leaking sensitive user information.
 
-![image](/assets/img/improper_access_cont_0.jpg)
+![Improper access control – exposed endpoints](/assets/img/improper_access_cont_0.jpg)
 
 ## The Discovery
 

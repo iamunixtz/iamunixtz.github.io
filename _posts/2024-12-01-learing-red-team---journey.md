@@ -5,7 +5,7 @@ categories: [Red Team Journey]
 tags: [redteamjourney, cybersecurity]
 ---
 
-![image](/assets/img/learing_red_team_-_j_0.jpg)
+![Red team journey](/assets/img/learing_red_team_-_j_0.jpg)
 
 # Learing Red Team - Journey
 

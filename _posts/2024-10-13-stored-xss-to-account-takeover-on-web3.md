@@ -7,7 +7,7 @@ tags: [bughunting, cybersecurity]
 
 Hey hunters, hope you're all doing well. Today I want to share my story about how I discovered a Stored XSS vulnerability that allowed full account takeover (ATO) on a Web3 website.
 
-![image](/assets/img/how_i_found_a_stored_0.jpg)
+![Stored XSS – Web3 ATO](/assets/img/how_i_found_a_stored_0.jpg)
 
 ## The Beginning
 
@@ -47,7 +47,7 @@ At this point, I wanted to determine the full impact, so I used my XSS payload d
 
 Each time I viewed my own post, my server received the cookies and session tokens. This confirmed that if any other user, including administrators, viewed the post, I could compromise their account.
 
-![image](/assets/img/how_i_found_a_stored_1.jpg)
+![Session exfil POC](/assets/img/how_i_found_a_stored_1.jpg)
 
 ## The Impact
 
@@ -58,6 +58,10 @@ By exploiting this issue, I could:
 - Access sensitive personal data stored in the account.
 
 This meant a complete account takeover was possible.
+
+![XSS impact](/assets/img/how_i_found_a_stored_2.jpg)
+
+![Report proof](/assets/img/how_i_found_a_stored_3.jpg)
 
 ## The Report and Outcome
 

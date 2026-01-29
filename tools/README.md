@@ -37,6 +37,20 @@ bash tools/push-with-gh.sh
 
 Or manually: `gh auth setup-git` then `git push origin main`. GitHub CLI does not replace `git push`—it only provides the credentials.
 
+**If push is rejected (non-fast-forward):** your branch is behind the remote. Sync then push:
+
+```bash
+bash tools/sync-and-push.sh
+```
+
+Or manually: `git fetch origin && git pull --rebase origin main && git push origin main`.
+
+**One-time after history rewrite (contributors cleanup):** use force push so GitHub shows only you as contributor:
+
+```bash
+git push --force origin main
+```
+
 ---
 
 ## Download more images from old GitBook blog

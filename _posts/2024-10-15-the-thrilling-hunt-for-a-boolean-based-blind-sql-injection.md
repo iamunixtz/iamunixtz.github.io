@@ -7,7 +7,7 @@ tags: [bughunting, cybersecurity]
 
 Hey everyone! Gather around, because I've got an exciting tale from my latest bug bounty adventure. It's a story of discovery, persistence, and a bit of clever trickery as I stumbled upon a boolean-based blind SQL injection vulnerability on `https://portal.sddc.army.mil/`. Let's dive in!
 
-![image](/assets/img/the_thrilling_hunt_f_0.jpg)
+![Boolean-based blind SQLi – User-Agent injection](/assets/img/the_thrilling_hunt_f_0.jpg)
 
 ## Summary
 

@@ -9,7 +9,7 @@ tags: [bughunting, cybersecurity]
 
 How I Discovered a Broken Access Control Vulnerability that Leaked Sensitive Data
 
-![image](/assets/img/exposing_broken_acce_0.jpg)
+![Salesforce Aura – broken access control](/assets/img/exposing_broken_acce_0.jpg)
 
 Hello Folks
 
