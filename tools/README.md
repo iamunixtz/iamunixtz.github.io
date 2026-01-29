@@ -1,5 +1,22 @@
 # Tools
 
+## Favicon (profile image)
+
+Favicons in `assets/img/favicons/` are generated from your profile image (`assets/img/avatar.jpeg`). If you change your avatar, regenerate them:
+
+```bash
+python3 -c "
+from PIL import Image
+img = Image.open('assets/img/avatar.jpeg')
+img.resize((16,16)).save('assets/img/favicons/favicon-16x16.png')
+img.resize((32,32)).save('assets/img/favicons/favicon-32x32.png')
+img.resize((180,180)).save('assets/img/favicons/apple-touch-icon.png')
+img.resize((32,32)).save('assets/img/favicons/favicon.ico', format='ICO', sizes=[(32,32)])
+print('Favicons updated from avatar.')
+"
+git add assets/img/favicons/ && git commit -m "Update favicon from avatar" && git push
+```
+
 ## First-time: init Chirpy assets submodule (for local build)
 
 If you clone the repo and want to build or run Jekyll locally, init the theme assets:
