@@ -5,7 +5,11 @@ categories: [Noob Researching]
 tags: [noobresearching, cybersecurity]
 ---
 
-[Burpsuite Pwn](https://unixtz.gitbook.io/blog/readme/noob-researching-0-day-and-n-day-bugs./burpsuite-pwn)
+When bug bounties get quiet, sometimes the best move is to step back and do some **noob research**—diving into 0-day and N-day territory, messing with tools we use every day, and seeing what breaks.
 
+This section is where I document that kind of work: experiments with Burp Suite extensions, tool security, and the occasional "wait, can I pwn *this*?" moment.
 
+**First writeup:** [Burpsuite Pwn](/posts/Burpsuite-Pwn/) — How malicious Burp extensions can turn the industry's favorite proxy into a full-blown attack vector (and why Burp said "working as intended").
+
+More to come as I keep poking around. Stay curious.
 

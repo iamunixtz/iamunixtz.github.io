@@ -7,7 +7,8 @@ tags: [redteamjourney, cybersecurity]
 
 ![image](/assets/img/learing_red_team_-_j_0.jpg)
 
-Learing Red Team - Journey
+# Learing Red Team - Journey
 
-are supported natively.
+Beyond bug bounty and web hacking, I'm stepping into **red teaming**—offensive security, adversary simulation, and understanding how defenders think. This is the start of that journey: learning tradecraft, tools, and how to operate in a more targeted, mission-driven way.
 
+I'll document progress, resources, and writeups here as I go. If you're on a similar path, welcome—let's learn together.
