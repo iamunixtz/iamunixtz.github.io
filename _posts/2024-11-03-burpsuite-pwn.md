@@ -3,6 +3,7 @@ title: "Burpsuite Pwn"
 date: 2024-11-03 00:00:00 +0000
 categories: [Noob Researching]
 tags: [noobresearching, cybersecurity]
+permalink: /posts/Burpsuite-Pwn/
 ---
 
 ### Hello, folks!
