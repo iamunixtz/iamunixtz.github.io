@@ -1,5 +1,27 @@
 # Tools
 
+## First-time: init Chirpy assets submodule (for local build)
+
+If you clone the repo and want to build or run Jekyll locally, init the theme assets:
+
+```bash
+git submodule update --init --recursive
+```
+
+CI (Build and Deploy) does this automatically.
+
+## Push using gh (no plain git credentials)
+
+To push using your GitHub CLI login (gh handles auth, git does the push):
+
+```bash
+bash tools/push-with-gh.sh
+```
+
+Or manually: `gh auth setup-git` then `git push origin main`. GitHub CLI does not replace `git push`—it only provides the credentials.
+
+---
+
 ## Download more images from old GitBook blog
 
 The script `download_gitbook_images.py` fetches images from your old blog (unixtz.gitbook.io) and saves them into `assets/img/` with clear names (e.g. `bughunting_bugz.jpg`, `xss_report.jpg`).
